@@ -1,65 +1,45 @@
-import Image from "next/image";
+"use client";
+
+import { Download } from "lucide-react";
+import Socials from "@/components/Socials";
+import Photo from "@/components/Photo";
+import Stats from "@/components/Stats";
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <section className="h-full">
+      <div className="container mx-auto h-full">
+        <div className="flex flex-col xl:flex-row items-center xl:justify-start xl:gap-[100px] xl:pt-8 xl:pb-24">
+          <div className="text-center xl:text-left order-2 xl:order-none">
+            <span className="text-lg text-white/80">Développeur Full Stack</span>
+            <h1 className="text-5xl xl:text-7xl font-bold mb-6">
+              Bonjour, je suis <br /> <span className="text-accent">Alban Pombo</span>
+            </h1>
+            <p className="max-w-[500px] mb-9 text-white/70 text-base font-light leading-relaxed">
+              Passionné par la création d'expériences numériques intuitives et performantes,
+              je transforme des idées complexes en code élégant. Expert en
+              <span className="text-accent"> React</span>, <span className="text-accent">Next.js</span> et
+              <span className="text-accent"> Django</span>.
+            </p>
+            <div className="flex flex-col xl:flex-row items-center gap-8">
+              <button className="uppercase flex items-center gap-2 border border-accent text-accent hover:bg-accent hover:text-primary transition-all duration-500 px-8 py-3 rounded-full font-semibold tracking-wider shadow-[0_0_20px_rgba(0,255,153,0.2)] hover:shadow-[0_0_30px_rgba(0,255,153,0.4)]">
+                <span>Télécharger CV</span>
+                <Download className="text-xl" />
+              </button>
+              <div className="mb-8 xl:mb-0">
+                <Socials
+                  containerStyles="flex gap-6"
+                  iconStyles="w-9 h-9 border border-accent rounded-full flex justify-center items-center text-accent text-base hover:bg-accent hover:text-primary hover:transition-all duration-500"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="order-1 xl:order-none mb-8 xl:mb-0">
+            <Photo />
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+      </div>
+      <Stats />
+    </section>
   );
 }
