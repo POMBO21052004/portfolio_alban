@@ -1,0 +1,4 @@
+[00:00:03.283] Server  LOG     ✓ Ready in 2.3s
+[00:00:03.287] Server  WARN    ⚠ Cross origin request detected from 10.2.0.2 to /_next/* resource. In a future major version of Next.js, you will need to explicitly configure "allowedDevOrigins" in next.config to allow this.
+Read more: https://nextjs.org/docs/app/api-reference/config/next-config-js/allowedDevOrigins
+[00:00:06.525] Browser WARN    Image with src "/assets/photo.png" has "fill" but is missing "sizes" prop. Please add it to improve page performance. Read more: https://nextjs.org/docs/api-reference/next/image#sizes

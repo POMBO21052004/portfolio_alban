@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///C:/Users/Alban/Desktop/Portfolio%20Next/portfolio/src/app/contact/page.tsx"],"sourcesContent":["const Contact = () => {\r\n    return (\r\n        <section>\r\n            <div className=\"container mx-auto\">\r\n                Contact Page\r\n            </div>\r\n        </section>\r\n    )\r\n};\r\n\r\nexport default Contact;\r\n"],"names":[],"mappings":";;;;;;AAAA,MAAM,UAAU;IACZ,qBACI,8OAAC;kBACG,cAAA,8OAAC;YAAI,WAAU;sBAAoB;;;;;;;;;;;AAK/C;uCAEe"}}]
+}
