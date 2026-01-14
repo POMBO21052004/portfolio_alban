@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Github, Linkedin, Youtube, Twitter } from "lucide-react";
 
 const socialLinks = [
-    { icon: <Github />, path: "https://github.com" },
+    { icon: <Github />, path: "https://github.com/POMBO21052004" },
     { icon: <Linkedin />, path: "https://linkedin.com" },
     { icon: <Youtube />, path: "https://youtube.com" },
     { icon: <Twitter />, path: "https://twitter.com" },

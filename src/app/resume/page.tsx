@@ -7,6 +7,8 @@ import {
     FaReact,
     FaFigma,
     FaNodeJs,
+    FaGithub,
+    FaGitAlt,
 } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs, SiDjango, SiLaravel, SiMysql, SiDocker } from "react-icons/si";
 
@@ -31,11 +33,11 @@ const about = {
         },
         {
             fieldName: "Téléphone",
-            fieldValue: "(+237) 681 20 25 20 / 650 85 90 51",
+            fieldValue: "(+237) 681 20 25 20",
         },
         {
             fieldName: "Expérience",
-            fieldValue: "2+ Ans",
+            fieldValue: "3+ Ans",
         },
         {
             fieldName: "Nationalité",
@@ -46,8 +48,16 @@ const about = {
             fieldValue: "albanpombombe@gmail.com",
         },
         {
+            fieldName: "Freelance",
+            fieldValue: "Disponible",
+        },
+        {
+            fieldName: "Ville",
+            fieldValue: "Douala, Cameroun",
+        },
+        {
             fieldName: "Langues",
-            fieldValue: "Français, Anglais",
+            fieldValue: "Français",
         },
     ],
 };
@@ -109,56 +119,93 @@ const education = {
 const skills = {
     title: "Mes compétences",
     description:
-        "Une stack technique moderne et polyvalente pour répondre à tous les besoins de développement web.",
-    skillList: [
+        "Maîtrise d'une stack technique complète allant du Front-end au Back-end. J'utilise des technologies modernes comme React et Next.js pour créer des interfaces dynamiques, couplées à des architectures robustes sous Django ou Laravel. Mon expertise inclut également la gestion de bases de données, la conteneurisation avec Docker et le design d'interfaces avec Figma.",
+    categories: [
         {
-            icon: <FaHtml5 />,
-            name: "html 5",
+            title: "Front-End",
+            skillList: [
+                {
+                    icon: <FaHtml5 />,
+                    name: "html 5",
+                    level: "Avancé",
+                },
+                {
+                    icon: <FaCss3 />,
+                    name: "css 3",
+                    level: "Avancé",
+                },
+                {
+                    icon: <FaJs />,
+                    name: "javascript",
+                    level: "Intermédiaire",
+                },
+                {
+                    icon: <FaReact />,
+                    name: "react.js",
+                    level: "Avancé",
+                },
+                {
+                    icon: <SiNextdotjs />,
+                    name: "next.js",
+                    level: "Intermédiaire",
+                },
+                {
+                    icon: <SiTailwindcss />,
+                    name: "tailwind.css",
+                    level: "Avancé",
+                },
+            ]
         },
         {
-            icon: <FaCss3 />,
-            name: "css 3",
+            title: "Back-End",
+            skillList: [
+                {
+                    icon: <FaNodeJs />,
+                    name: "node.js",
+                    level: "Intermédiaire",
+                },
+                {
+                    icon: <SiDjango />,
+                    name: "django",
+                    level: "Avancé",
+                },
+                {
+                    icon: <SiLaravel />,
+                    name: "laravel",
+                    level: "Intermédiaire",
+                },
+                {
+                    icon: <SiMysql />,
+                    name: "mysql",
+                    level: "Avancé",
+                },
+            ]
         },
         {
-            icon: <FaJs />,
-            name: "javascript",
-        },
-        {
-            icon: <FaReact />,
-            name: "react.js",
-        },
-        {
-            icon: <SiNextdotjs />,
-            name: "next.js",
-        },
-        {
-            icon: <SiTailwindcss />,
-            name: "tailwind.css",
-        },
-        {
-            icon: <FaNodeJs />,
-            name: "node.js",
-        },
-        {
-            icon: <SiDjango />,
-            name: "django",
-        },
-        {
-            icon: <SiLaravel />,
-            name: "laravel",
-        },
-        {
-            icon: <SiMysql />,
-            name: "mysql",
-        },
-        {
-            icon: <SiDocker />,
-            name: "docker",
-        },
-        {
-            icon: <FaFigma />,
-            name: "figma",
-        },
+            title: "Outils & DevOps",
+            skillList: [
+                {
+                    icon: <SiDocker />,
+                    name: "docker",
+                    level: "Basique",
+                },
+                {
+                    icon: <FaGitAlt />,
+                    name: "git",
+                    level: "Intermédiaire",
+                },
+                {
+                    icon: <FaGithub />,
+                    name: "github",
+                    level: "Intermédiaire",
+                },
+                {
+                    icon: <FaFigma />,
+                    name: "figma",
+                    level: "Intermédiaire",
+                },
+            ]
+        }
     ],
 };
 
@@ -194,12 +241,12 @@ const Resume = () => {
                                     {experience.description}
                                 </p>
                                 <ScrollArea className="h-[400px]">
-                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                                    <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[50px]">
                                         {experience.items.map((item, index) => {
                                             return (
                                                 <li
                                                     key={index}
-                                                    className="bg-[#232329] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                                                    className="bg-[#232329] h-full py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                                                 >
                                                     <span className="text-accent">{item.duration}</span>
                                                     <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left font-bold mb-2">
@@ -234,7 +281,7 @@ const Resume = () => {
                                             return (
                                                 <li
                                                     key={index}
-                                                    className="bg-[#232329] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                                                    className="bg-[#232329] h-full py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                                                 >
                                                     <span className="text-accent">{item.duration}</span>
                                                     <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left font-bold mb-2">
@@ -265,26 +312,40 @@ const Resume = () => {
                                         {skills.description}
                                     </p>
                                 </div>
-                                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
-                                    {skills.skillList.map((skill, index) => {
-                                        return (
-                                            <li key={index}>
-                                                <TooltipProvider delayDuration={100}>
-                                                    <Tooltip>
-                                                        <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center group">
-                                                            <div className="text-6xl group-hover:text-accent transition-all duration-300">
-                                                                {skill.icon}
-                                                            </div>
-                                                        </TooltipTrigger>
-                                                        <TooltipContent>
-                                                            <p className="capitalize">{skill.name}</p>
-                                                        </TooltipContent>
-                                                    </Tooltip>
-                                                </TooltipProvider>
-                                            </li>
-                                        );
-                                    })}
-                                </ul>
+
+                                <ScrollArea className="h-[400px]">
+                                    <div className="flex flex-col gap-10">
+                                        {skills.categories.map((category, catIndex) => (
+                                            <div key={catIndex} className="flex flex-col gap-4">
+                                                <h4 className="text-2xl font-bold text-accent text-center xl:text-left">{category.title}</h4>
+                                                <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
+                                                    {category.skillList.map((skill, index) => {
+                                                        return (
+                                                            <li key={index}>
+                                                                <TooltipProvider delayDuration={100}>
+                                                                    <Tooltip>
+                                                                        <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex flex-col justify-center items-center gap-2 group">
+                                                                            <div className="text-6xl group-hover:text-accent transition-all duration-300">
+                                                                                {skill.icon}
+                                                                            </div>
+                                                                            <p className="capitalize text-sm group-hover:text-white transition-all duration-300">{skill.name}</p>
+                                                                        </TooltipTrigger>
+                                                                        <TooltipContent>
+                                                                            <div className="text-center">
+                                                                                <p className="capitalize font-bold">{skill.name}</p>
+                                                                                <p className="text-accent text-sm">{skill.level}</p>
+                                                                            </div>
+                                                                        </TooltipContent>
+                                                                    </Tooltip>
+                                                                </TooltipProvider>
+                                                            </li>
+                                                        );
+                                                    })}
+                                                </ul>
+                                            </div>
+                                        ))}
+                                    </div>
+                                </ScrollArea>
                             </div>
                         </TabsContent>
 
@@ -295,15 +356,15 @@ const Resume = () => {
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
                                     {about.description}
                                 </p>
-                                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-y-6 max-w-[620px] mx-auto xl:mx-0">
+                                <ul className="grid grid-cols-1 xl:grid-cols-2 gap-[30px] max-w-[620px] mx-auto xl:mx-0">
                                     {about.info.map((item, index) => {
                                         return (
                                             <li
                                                 key={index}
-                                                className="flex items-center justify-center xl:justify-start gap-4"
+                                                className="bg-[#232329] h-[100px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                                             >
-                                                <span className="text-white/60">{item.fieldName}</span>
-                                                <span className="text-xl">{item.fieldValue}</span>
+                                                <span className="text-accent/60">{item.fieldName}</span>
+                                                <span className="text-xl font-bold">{item.fieldValue}</span>
                                             </li>
                                         );
                                     })}
