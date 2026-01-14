@@ -23,7 +23,7 @@ const ProjectNavigation = ({ containerStyles, iconStyles, currentIndex, totalPro
 
             {/* Counter */}
             <div className="text-white/60 font-medium text-base xl:text-lg">
-                Projet {currentIndex + 1} / {totalProjects < 10 ? `0${totalProjects}` : totalProjects}
+                Projet {currentIndex + 1} / {totalProjects < 10 ? `${totalProjects}` : totalProjects}
             </div>
 
             {/* Next Button */}
