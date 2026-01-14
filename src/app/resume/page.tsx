@@ -27,11 +27,11 @@ const about = {
     info: [
         {
             fieldName: "Nom",
-            fieldValue: "Alban Pombo",
+            fieldValue: "Pombo Mbe Alban",
         },
         {
             fieldName: "Téléphone",
-            fieldValue: "(+237) 681 20 25 20",
+            fieldValue: "(+237) 681 20 25 20 / 650 85 90 51",
         },
         {
             fieldName: "Expérience",
@@ -60,18 +60,21 @@ const experience = {
     items: [
         {
             company: "Digiplus Consulting Sarl",
-            position: "Stagiaire",
+            position: "Stagiaire Développeur Web",
             duration: "Nov 2025 - Jan 2026",
+            details: "Conception d'une application de gestion de stock en temps réel. Mise en place d'une API REST avec Django et intégration Frontend avec React. Optimisation des requêtes SQL pour réduire le temps de chargement de 40%."
         },
         {
             company: "PANZANI CAMEROUN S.A",
             position: "Stagiaire Analyste Info",
             duration: "Jan 2025 - Mar 2025",
+            details: "Analyse des besoins utilisateurs pour la digitalisation des processus internes. Développement de scripts Python pour l'automatisation des rapports hebdomadaires. Maintenance du parc informatique et support technique niveau 2."
         },
         {
             company: "CCN Technologies",
-            position: "Stagiaire",
+            position: "Stagiaire Full Stack",
             duration: "Mar 2024 - Mai 2024",
+            details: "Participation au développement d'un site e-commerce. Intégration de maquettes Figma pixel-perfect. Gestion de l'authentification et des paiements en ligne via Stripe."
         },
     ],
 };
@@ -86,16 +89,19 @@ const education = {
             institution: "IUT Douala",
             degree: "Licence Génie Logiciel",
             duration: "2024 - 2025",
+            details: "Spécialisation en architectures micro-services et sécurité applicative. Projet de fin d'études sur l'IA appliquée à la maintenance prédictive."
         },
         {
             institution: "IUT Douala",
             degree: "DUT en Génie Informatique",
             duration: "2023 - 2024",
+            details: "Fondamentaux du développement web et mobile. Algorithmique avancée et structures de données. Administration systèmes et réseaux (Linux, Cisco)."
         },
         {
             institution: "Institut Polyvalent Minfang",
             degree: "Baccalauréat C",
             duration: "2021 - 2022",
+            details: "Mention Bien. Excellence en Mathématiques et Physique."
         },
     ],
 };
@@ -193,17 +199,20 @@ const Resume = () => {
                                             return (
                                                 <li
                                                     key={index}
-                                                    className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                                                    className="bg-[#232329] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                                                 >
                                                     <span className="text-accent">{item.duration}</span>
-                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left font-bold mb-2">
                                                         {item.position}
                                                     </h3>
-                                                    <div className="flex items-center gap-3">
+                                                    <div className="flex items-center gap-3 mb-4">
                                                         {/* dot */}
                                                         <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                                                        <p className="text-white/60">{item.company}</p>
+                                                        <p className="text-white/60 font-medium">{item.company}</p>
                                                     </div>
+                                                    <p className="text-white/60 text-sm leading-snug text-center lg:text-left">
+                                                        {item.details}
+                                                    </p>
                                                 </li>
                                             );
                                         })}
@@ -225,17 +234,20 @@ const Resume = () => {
                                             return (
                                                 <li
                                                     key={index}
-                                                    className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
+                                                    className="bg-[#232329] h-[250px] py-6 px-10 rounded-xl flex flex-col justify-center items-center lg:items-start gap-1"
                                                 >
                                                     <span className="text-accent">{item.duration}</span>
-                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                                                    <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left font-bold mb-2">
                                                         {item.degree}
                                                     </h3>
-                                                    <div className="flex items-center gap-3">
+                                                    <div className="flex items-center gap-3 mb-4">
                                                         {/* dot */}
                                                         <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
-                                                        <p className="text-white/60">{item.institution}</p>
+                                                        <p className="text-white/60 font-medium">{item.institution}</p>
                                                     </div>
+                                                    <p className="text-white/60 text-sm leading-snug text-center lg:text-left">
+                                                        {item.details}
+                                                    </p>
                                                 </li>
                                             );
                                         })}
