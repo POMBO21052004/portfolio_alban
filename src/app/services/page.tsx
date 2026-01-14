@@ -1,43 +1,55 @@
 "use client";
 
-import { BsArrowDownRight } from "react-icons/bs";
+import { BsArrowRight, BsCodeSlash, BsDatabase, BsGraphUp, BsAndroid2, BsRobot } from "react-icons/bs";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 const services = [
     {
         num: "01",
-        title: "Développement Web",
+        title: "Développement Front-End",
         description:
-            "Transformez vos idées en réalité numérique. Je conçois des sites web vitrines et des applications complexes sur mesure, optimisés pour le référencement (SEO) et la rapidité, garantissant une présence en ligne percutante.",
+            "Création d'interfaces utilisateur modernes, réactives et intuitives avec React et Next.js.",
         href: "",
+        icon: <BsCodeSlash />,
     },
     {
         num: "02",
-        title: "Design UI/UX",
+        title: "Développement Back-End",
         description:
-            "L'utilisateur au centre de tout. Je crée des interfaces (UI) modernes et des expériences (UX) fluides qui captivent vos visiteurs dès la première seconde. Maquettage précis sur Figma et prototypage interactif.",
+            "Conception d'architectures robustes, API sécurisées et gestion de données performantes avec Laravel et Django Rest Framework.",
         href: "",
+        icon: <BsDatabase />,
     },
     {
         num: "03",
-        title: "Développement Backend",
+        title: "Analyse Technique",
         description:
-            "La puissance cachée de vos applications. Je développe des API RESTful sécurisées et performantes, gère vos bases de données et assure l'architecture serveur pour que votre business tourne 24/7 sans interruption.",
+            "Audit approfondi de vos systèmes et stratégie technologique pour optimiser vos performances.",
         href: "",
+        icon: <BsGraphUp />,
     },
     {
         num: "04",
-        title: "Analyse Technique",
+        title: "Développement Android",
         description:
-            "Audit et stratégie. J'analyse vos besoins techniques pour proposer les solutions les plus adaptées. De la conception de l'architecture logicielle à l'optimisation des processus existants.",
+            "Réalisation d'applications mobiles natives et cross-platform performantes et ergonomiques à l'aide de Flutter.",
         href: "",
+        icon: <BsAndroid2 />,
+    },
+    {
+        num: "05",
+        title: "Optimisation IA",
+        description:
+            "Intégration d'intelligence artificielle pour automatiser vos processus et analyser vos données.",
+        href: "",
+        icon: <BsRobot />,
     },
 ];
 
 const Services = () => {
     return (
-        <section className="min-h-[80vh] flex flex-col justify-center py-12 xl:py-0">
+        <section className="min-h-[80vh] flex flex-col justify-center py-12">
             <div className="container mx-auto">
                 <motion.div
                     initial={{ opacity: 0 }}
@@ -45,37 +57,56 @@ const Services = () => {
                         opacity: 1,
                         transition: { delay: 2.4, duration: 0.4, ease: "easeInOut" },
                     }}
-                    className="grid grid-cols-1 md:grid-cols-2 gap-[60px]"
+                    className="flex flex-col gap-8"
                 >
-                    {services.map((service, index) => {
-                        return (
-                            <div
-                                key={index}
-                                className="flex-1 flex flex-col justify-center gap-4 group p-8 rounded-xl hover:bg-[#232329] transition-all duration-300 border border-transparent hover:border-accent/20"
-                            >
-                                {/* top */}
-                                <div className="w-full flex justify-between items-center">
-                                    <div className="text-4xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
-                                        {service.num}
+                    {/* Header */}
+                    <div className="flex flex-col gap-2 text-center items-center mb-8">
+                        <h2 className="text-4xl md:text-5xl font-bold text-white">
+                            Solutions Numériques <span className="text-accent">Sur Mesure</span>
+                        </h2>
+                        <p className="text-white/60 text-lg max-w-[600px] leading-relaxed">
+                            Des services technologiques avancés pour concrétiser vos idées en solutions numériques.
+                        </p>
+                    </div>
+
+                    {/* Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px] max-w-[1000px] mx-auto">
+                        {services.map((service, index) => {
+                            return (
+                                <div
+                                    key={index}
+                                    className="flex-1 flex flex-col justify-center gap-2 group rounded-xl px-6 py-5 bg-[#232329] hover:bg-[#232329]/80 transition-all duration-300"
+                                >
+                                    {/* top: Icon + Number */}
+                                    <div className="w-full flex justify-between items-center">
+                                        <div className="text-3xl text-accent group-hover:text-accent-hover transition-all duration-300">
+                                            {service.icon}
+                                        </div>
+                                        <div className="text-3xl font-extrabold text-outline text-transparent group-hover:text-outline-hover transition-all duration-500">
+                                            {service.num}
+                                        </div>
                                     </div>
-                                    <Link
-                                        href={service.href}
-                                        className="w-[50px] h-[50px] rounded-full bg-white group-hover:bg-accent transition-all duration-500 flex justify-center items-center hover:-rotate-45"
-                                    >
-                                        <BsArrowDownRight className="text-primary text-2xl" />
-                                    </Link>
+
+                                    {/* content */}
+                                    <h2 className="text-[26px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
+                                        {service.title}
+                                    </h2>
+                                    <p className="text-white/60 leading-relaxed text-base">
+                                        {service.description}
+                                    </p>
+
+                                    {/* border / link */}
+                                    <div className="border-b border-white/20 w-full my-3"></div>
+                                    <div className="w-full flex justify-start">
+                                        <Link href={service.href} className="flex items-center gap-2 text-accent text-sm uppercase tracking-widest hover:text-accent-hover transition-all">
+                                            <span>En savoir plus</span>
+                                            <BsArrowRight className="text-lg" />
+                                        </Link>
+                                    </div>
                                 </div>
-                                {/* heading */}
-                                <h2 className="text-3xl font-bold leading-none text-white group-hover:text-accent transition-all duration-500">
-                                    {service.title}
-                                </h2>
-                                {/* description */}
-                                <p className="text-white/60 leading-relaxed text-base">{service.description}</p>
-                                {/* border */}
-                                <div className="border-b border-white/20 w-full group-hover:border-none"></div>
-                            </div>
-                        );
-                    })}
+                            );
+                        })}
+                    </div>
                 </motion.div>
             </div>
         </section>

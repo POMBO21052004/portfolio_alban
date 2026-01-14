@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Nav from "./Nav";
+import MobileNav from "./MobileNav";
 
 const Header = () => {
     return (
@@ -22,10 +23,9 @@ const Header = () => {
                     </Link>
                 </div>
 
-                {/* Mobile Nav Placeholder */}
-                <div className="xl:hidden text-accent">
-                    {/* Placeholder for MobileNav */}
-                    Menu
+                {/* Mobile Nav */}
+                <div className="xl:hidden">
+                    <MobileNav />
                 </div>
             </div>
         </header>
