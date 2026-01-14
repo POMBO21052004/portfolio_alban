@@ -13,6 +13,9 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "Pombo Mbe Alban| Full Stack Developer",
   description: "Développeur Web Full-Stack agé de 22 ans, passionné par la création d’application moderne et intuitives, je transforme des idées complexes en code élégant. curieux et créatif, j’ai acquis de solides compétences en développement front-end et back-end, me permettant de concevoir des solutions complètes et performantes.",
+  icons: {
+    icon: "/logo.png",
+  },
 };
 
 export default function RootLayout({
