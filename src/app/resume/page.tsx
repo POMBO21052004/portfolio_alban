@@ -95,14 +95,14 @@ const experience = {
             position: "Stagiaire Développeur Web",
             duration: "Nov 2025 - Jan 2026",
             location: "https://maps.google.com/?q=Digiplus+Consulting+Douala",
-            details: "Conception d'une application de gestion de stock en temps réel. Mise en place d'une API REST avec Django et intégration Frontend avec React. Optimisation des requêtes SQL pour réduire le temps de chargement de 40%."
+            details: "Réalisation du projet 'Le Bricoleur', plateforme de mise en relation client-technicien. Développement Fullstack (React/Laravel), intégration de la géolocalisation et du système de paiement."
         },
         {
             company: "PANZANI CAMEROUN S.A",
             position: "Stagiaire Analyste Info",
             duration: "Jan 2025 - Mar 2025",
             location: "https://maps.google.com/?q=PANZANI+CAMEROUN+Douala",
-            details: "Analyse des besoins utilisateurs pour la digitalisation des processus internes. Développement de scripts Python pour l'automatisation des rapports hebdomadaires. Maintenance du parc informatique et support technique niveau 2."
+            details: "Conception et déploiement de l'application 'GTP' (Gestion de Temps et Présence) pour optimiser le suivi RH. Automatisation des fiches de pointage et reporting des heures via Dashboard interactif."
         },
         {
             company: "CCN Technologies",
