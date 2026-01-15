@@ -39,9 +39,9 @@ const projects = [
         title: "Système de Présence",
         description:
             "Une solution ERP complète pour la gestion des ressources humaines, permettant un suivi précis des présences et des rapports automatisés pour optimiser la productivité interne.",
-        stack: [{ name: "React" }, { name: "Django" }, { name: "PostgreSQL" }, { name: "Framer Motion" }],
-        image: "/assets/work/thumb1.png",
-        images: ["/assets/work/thumb1.png"],
+        stack: [{ name: "React" }, { name: "Laravel" }, { name: "MySQL" }, { name: "Bootstrap" }],
+        image: "/assets/work/GTP1.png",
+        images: ["/assets/work/GTP1.png", "/assets/work/GTP2.png", "/assets/work/GTP3.png", "/assets/work/GTP4.png", "/assets/work/GTP5.png"],
         live: "",
         github: "",
     },
@@ -59,13 +59,13 @@ const projects = [
     },
     {
         num: "04",
-        category: "backend",
-        title: "API E-Commerce",
+        category: "Mobile App",
+        title: "Stock Master",
         description:
-            "Architecture backend scalable capable de gérer des milliers de transactions. Sécurité renforcée (JWT), gestion des stocks en temps réel et intégration de passerelles de paiement.",
-        stack: [{ name: "Django REST" }, { name: "MySQL" }, { name: "Docker" }],
-        images: ["/assets/work/thumb3.png"],
-        image: "/assets/work/thumb3.png",
+            "Application mobile de gestion de stock complète et autonome avec interface Premium. Gestion centralisée des articles, traçabilité des mouvements, analyses statistiques avancées et support mode sombre/clair.",
+        stack: [{ name: "Flutter" }, { name: "SQLite" }, { name: "Provider" }],
+        image: "/assets/work/StockMaster1.jpg",
+        images: ["/assets/work/StockMaster1.jpg", "/assets/work/StockMaster8.jpg" , "/assets/work/StockMaster2.jpg", "/assets/work/StockMaster3.jpg", "/assets/work/StockMaster4.jpg", "/assets/work/StockMaster5.jpg", "/assets/work/StockMaster6.jpg"],
         live: "",
         github: "",
     },
@@ -136,7 +136,7 @@ const Work = () => {
                             </h2>
                             {/* category */}
                             <h3 className="text-2xl text-accent font-bold capitalize">
-                                {project.category} project
+                                {project.category}
                             </h3>
                             {/* description */}
                             <p className="text-white/60 text-base leading-relaxed">
