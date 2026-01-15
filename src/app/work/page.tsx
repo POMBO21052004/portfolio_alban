@@ -23,13 +23,13 @@ import ImageLightbox from "@/components/ImageLightbox";
 const projects = [
     {
         num: "01",
-        category: "Fullstack",
+        category: "Frontend",
         title: "Le Bricoleur",
         description:
             "Une plateforme de mise en relation mettant en relation les utilisateurs avec des techniciens qualifiés au Cameroun pour des services de réparation et rénovation. Le service garantit des interventions rapides et des professionnels de confiance.",
         stack: [{ name: "React" }, { name: "Tailwind CSS" }, { name: "Mobile Apps" }],
         image: "/assets/work/lebricoleur1.png",
-        images: ["/assets/work/lebricoleur1.png", "/assets/work/lebricoleur2.png", "/assets/work/lebricoleur3.png"],
+        images: ["/assets/work/lebricoleur6.png", "/assets/work/lebricoleur5.png", "/assets/work/lebricoleur4.png", "/assets/work/lebricoleur7.png"],
         live: "https://app.lebricoleur.cm/",
         github: "",
     },
@@ -86,14 +86,14 @@ const Work = () => {
         setCurrentImageIndex(0); // Reset image index when changing projects
     }
 
-    // Auto-play images every 10 seconds
+    // Auto-play images every 15 seconds
     React.useEffect(() => {
         const timer = setInterval(() => {
             setCurrentImageIndex((prev) => {
                 const maxIndex = project.images.length - 1;
                 return prev >= maxIndex ? 0 : prev + 1;
             });
-        }, 10000);
+        }, 15000);
 
         return () => clearInterval(timer);
     }, [project.images.length]);
@@ -130,10 +130,14 @@ const Work = () => {
                                 {project.num}
                             </div>
 
-                            {/* category */}
-                            <h2 className="text-3xl font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
-                                Projet {project.category}
+                            {/* title */}
+                            <h2 className="text-[42px] font-bold leading-none text-white group-hover:text-accent transition-all duration-500 capitalize">
+                                {project.title}
                             </h2>
+                            {/* category */}
+                            <h3 className="text-white/60 text-lg capitalize">
+                                {project.category} project
+                            </h3>
                             {/* description */}
                             <p className="text-white/60 text-base leading-relaxed">
                                 {project.description}

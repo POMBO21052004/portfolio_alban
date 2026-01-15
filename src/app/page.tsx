@@ -1,11 +1,25 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { Download } from "lucide-react";
 import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
 
 export default function Home() {
+  const [greeting, setGreeting] = useState("Bonjour");
+
+  useEffect(() => {
+    const hours = new Date().getHours();
+    if (hours >= 18) {
+      setGreeting("Bonsoir");
+    } else if (hours >= 12) {
+      setGreeting("Bonne après-midi");
+    } else {
+      setGreeting("Bonjour");
+    }
+  }, []);
+
   return (
     <section className="h-full">
       <div className="container mx-auto h-full">
@@ -13,7 +27,7 @@ export default function Home() {
           <div className="text-center xl:text-left order-2 xl:order-none">
             <span className="text-lg text-white/80">Développeur Full Stack</span>
             <h1 className="text-5xl xl:text-7xl font-bold mb-6">
-              Bonjour, je suis <br /> <span className="text-accent">Pombo Mbe Alban</span>
+              {greeting}, je suis <br /> <span className="text-accent">Pombo Mbe Alban</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/70 text-base font-light leading-relaxed">
               Développeur Web Full-Stack agé de 22 ans, passionné par la création d’application
