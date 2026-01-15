@@ -78,15 +78,14 @@ const Work = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const handleSlideChange = (swiper: any) => {
-        // get current slide index
+        
         const currentIndex = swiper.activeIndex;
-        // update project state based on current slide index
+        
         setProject(projects[currentIndex]);
         setActiveIndex(currentIndex);
-        setCurrentImageIndex(0); // Reset image index when changing projects
+        setCurrentImageIndex(0); 
     }
 
-    // Auto-play images every 15 seconds
     React.useEffect(() => {
         const timer = setInterval(() => {
             setCurrentImageIndex((prev) => {

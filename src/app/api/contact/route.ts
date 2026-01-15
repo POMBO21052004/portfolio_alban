@@ -45,7 +45,41 @@ export async function POST(req: Request) {
         `,
             };
 
-            await transporter.sendMail(mailOptions);
+            const confirmationMailOptions = {
+                from: 'albanpombombe@gmail.com',
+                to: email,
+                subject: `Confirmation de réception - Alban Pombo Mbe`,
+                text: `
+          Bonjour ${firstname} ${lastname},
+
+          Merci de m'avoir contacté. J'ai bien reçu votre message concernant "${service}" et je vous en remercie.
+
+          Je vais examiner votre demande avec attention et je reviendrai vers vous dans les plus brefs délais (généralement sous 24 à 48 heures).
+
+          En attendant, n'hésitez pas à consulter mon portfolio pour voir mes réalisations récentes.
+
+          Cordialement,
+
+          Alban Pombo Mbe
+          Développeur Full Stack
+        `,
+                html: `
+          <div style="font-family: Arial, sans-serif; color: #333;">
+            <h3>Bonjour ${firstname} ${lastname},</h3>
+            <p>Merci de m'avoir contacté. J'ai bien reçu votre message concernant "<strong>${service}</strong>" et je vous en remercie.</p>
+            <p>Je vais examiner votre demande avec attention et je reviendrai vers vous dans les plus brefs délais (généralement sous 24 à 48 heures).</p>
+            <p>En attendant, n'hésitez pas à consulter mon portfolio pour voir mes réalisations récentes.</p>
+            <br>
+            <p>Cordialement,</p>
+            <p><strong>Alban Pombo Mbe</strong><br>Développeur Full Stack</p>
+          </div>
+        `,
+            };
+
+            await Promise.all([
+                transporter.sendMail(mailOptions),
+                transporter.sendMail(confirmationMailOptions),
+            ]);
 
             return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
         } catch (error) {
