@@ -27,7 +27,7 @@ const projects = [
         title: "Le Bricoleur",
         description:
             "Une plateforme de mise en relation mettant en relation les utilisateurs avec des techniciens qualifiés au Cameroun pour des services de réparation et rénovation. Le service garantit des interventions rapides et des professionnels de confiance.",
-        stack: [{ name: "React" }, { name: "Tailwind CSS" }, { name: "Mobile Apps" }],
+        stack: [{ name: "React" }, { name: "Tailwind CSS" }],
         image: "/assets/work/lebricoleur6.png",
         images: ["/assets/work/lebricoleur6.png", "/assets/work/lebricoleur5.png", "/assets/work/lebricoleur4.png", "/assets/work/lebricoleur7.png"],
         live: "https://app.lebricoleur.cm/",
@@ -65,7 +65,7 @@ const projects = [
             "Application mobile de gestion de stock complète et autonome avec interface Premium. Gestion centralisée des articles, traçabilité des mouvements, analyses statistiques avancées et support mode sombre/clair.",
         stack: [{ name: "Flutter" }, { name: "SQLite" }, { name: "Provider" }],
         image: "/assets/work/StockMaster1.jpg",
-        images: ["/assets/work/StockMaster1.jpg", "/assets/work/StockMaster8.jpg" , "/assets/work/StockMaster2.jpg", "/assets/work/StockMaster3.jpg", "/assets/work/StockMaster4.jpg", "/assets/work/StockMaster5.jpg", "/assets/work/StockMaster6.jpg"],
+        images: ["/assets/work/StockMaster1.jpg", "/assets/work/StockMaster8.jpg", "/assets/work/StockMaster2.jpg", "/assets/work/StockMaster3.jpg", "/assets/work/StockMaster4.jpg", "/assets/work/StockMaster5.jpg", "/assets/work/StockMaster6.jpg"],
         live: "",
         github: "",
     },
@@ -214,7 +214,7 @@ const Work = () => {
                                         </div>
                                         {/* image */}
                                         <div className="relative w-full h-full">
-                                            <Image src={project.images[currentImageIndex]} fill className="object-cover" alt={project.title} />
+                                            <Image src={project.images[currentImageIndex]} fill className="object-contain p-5" alt={project.title} />
                                         </div>
                                         {/* Image navigation arrows - only show if project has multiple images */}
                                         {project.images.length > 1 && (

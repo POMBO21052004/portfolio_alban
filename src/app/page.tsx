@@ -11,10 +11,8 @@ export default function Home() {
 
   useEffect(() => {
     const hours = new Date().getHours();
-    if (hours >= 18) {
+    if (hours >= 13) {
       setGreeting("Bonsoir");
-    } else if (hours >= 12) {
-      setGreeting("Bonne après-midi");
     } else {
       setGreeting("Bonjour");
     }
