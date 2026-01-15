@@ -22,16 +22,19 @@ const info = [
         icon: <FaPhoneAlt />,
         title: "Téléphone",
         description: "(+237) 681 20 25 20",
+        href: "tel:+237681202520",
     },
     {
         icon: <FaEnvelope />,
         title: "Email",
         description: "albanpombombe@gmail.com",
+        href: "mailto:albanpombombe@gmail.com",
     },
     {
         icon: <FaMapMarkerAlt />,
         title: "Adresse",
         description: "Douala Cameroun, PK 14, Mont Sinai",
+        href: null,
     },
 ];
 
@@ -97,7 +100,13 @@ const Contact = () => {
                                         </div>
                                         <div className="flex-1">
                                             <p className="text-white/60">{item.title}</p>
-                                            <h3 className="text-xl">{item.description}</h3>
+                                            {item.href ? (
+                                                <a href={item.href} className="text-xl hover:text-accent transition-all duration-300">
+                                                    {item.description}
+                                                </a>
+                                            ) : (
+                                                <h3 className="text-xl">{item.description}</h3>
+                                            )}
                                         </div>
                                     </li>
                                 );
