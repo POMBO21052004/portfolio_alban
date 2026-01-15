@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -39,6 +41,57 @@ const info = [
 ];
 
 const Contact = () => {
+    const [formData, setFormData] = useState({
+        firstname: "",
+        lastname: "",
+        email: "",
+        phone: "",
+        service: "",
+        message: "",
+    });
+    const [status, setStatus] = useState("");
+
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormData((prev: any) => ({ ...prev, [name]: value }));
+    };
+
+    const handleSelectChange = (value: string) => {
+        setFormData((prev: any) => ({ ...prev, service: value }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setStatus("loading");
+
+        try {
+            const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
+            });
+
+            if (response.ok) {
+                setStatus("success");
+                setFormData({
+                    firstname: "",
+                    lastname: "",
+                    email: "",
+                    phone: "",
+                    service: "",
+                    message: "",
+                });
+            } else {
+                setStatus("error");
+            }
+        } catch (error) {
+            console.error(error);
+            setStatus("error");
+        }
+    };
+
     return (
         <motion.section
             initial={{ opacity: 0 }}
@@ -52,29 +105,29 @@ const Contact = () => {
                 <div className="flex flex-col xl:flex-row gap-[30px]">
                     {/* form */}
                     <div className="xl:h-[54%] order-2 xl:order-none">
-                        <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
+                        <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
                             <h3 className="text-4xl text-accent">Travaillons ensemble</h3>
                             <p className="text-white/60">
                                 Intéressé par une collaboration ou vous avez une question ? Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.
                             </p>
                             {/* input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <Input type="firstname" placeholder="Prénom" />
-                                <Input type="lastname" placeholder="Nom" />
-                                <Input type="email" placeholder="Adresse Email" />
-                                <Input type="phone" placeholder="Numéro de téléphone" />
+                                <Input type="text" name="firstname" placeholder="Prénom" value={formData.firstname} onChange={handleChange} required />
+                                <Input type="text" name="lastname" placeholder="Nom" value={formData.lastname} onChange={handleChange} required />
+                                <Input type="email" name="email" placeholder="Adresse Email" value={formData.email} onChange={handleChange} required />
+                                <Input type="tel" name="phone" placeholder="Numéro de téléphone" value={formData.phone} onChange={handleChange} />
                             </div>
                             {/* select */}
-                            <Select>
+                            <Select onValueChange={handleSelectChange}>
                                 <SelectTrigger className="w-full">
                                     <SelectValue placeholder="Sélectionnez un service" />
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectGroup>
                                         <SelectLabel>Sélectionnez un service</SelectLabel>
-                                        <SelectItem value="est">Développement Web</SelectItem>
-                                        <SelectItem value="cst">Design UI/UX</SelectItem>
-                                        <SelectItem value="mst">Design de Logo</SelectItem>
+                                        <SelectItem value="Développement Web">Développement Web</SelectItem>
+                                        <SelectItem value="Design UI/UX">Design UI/UX</SelectItem>
+                                        <SelectItem value="Design de Logo">Design de Logo</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
@@ -82,11 +135,21 @@ const Contact = () => {
                             <Textarea
                                 className="h-[200px]"
                                 placeholder="Tapez votre message ici."
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
                             />
                             {/* btn */}
-                            <Button size="md" className="max-w-40">
-                                Envoyer
+                            <Button size="md" className="max-w-40" disabled={status === "loading"}>
+                                {status === "loading" ? "Envoi..." : "Envoyer"}
                             </Button>
+                            {status === "success" && (
+                                <p className="text-accent mt-2">Votre message a été envoyé avec succès !</p>
+                            )}
+                            {status === "error" && (
+                                <p className="text-red-500 mt-2">Une erreur s'est produite. Veuillez réessayer.</p>
+                            )}
                         </form>
                     </div>
                     {/* info */}
