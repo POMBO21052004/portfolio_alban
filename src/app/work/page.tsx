@@ -52,8 +52,8 @@ const projects = [
         description:
             "La Plateforme de Gestion de Bulletins Scolaires est une solution SaaS complète pour la gestion complète qui automatise et modernise la gestion des bulletins de votre établissement. Elle permet de réduire de 70% le temps consacré à l'administration des notes tout en garantissant zéro erreur dans les calculs.",
         stack: [{ name: "React" }, { name: "Bootstrap" }, { name: "Laravel" }],
-        image: "/assets/work/Edubullet1.png",
-        images: ["/assets/work/Edubullet1.png", "/assets/work/Edubullet2.png", "/assets/work/Edubullet3.png"],
+        image: "/assets/work/EduBullet1.png",
+        images: ["/assets/work/EduBullet1.png", "/assets/work/EduBullet2.png", "/assets/work/EduBullet3.png"],
         live: "https://edubullet-pro.infinityfreeapp.com/",
         github: "",
     },
