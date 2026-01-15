@@ -28,18 +28,18 @@ const projects = [
         description:
             "Une plateforme de mise en relation mettant en relation les utilisateurs avec des techniciens qualifiés au Cameroun pour des services de réparation et rénovation. Le service garantit des interventions rapides et des professionnels de confiance.",
         stack: [{ name: "React" }, { name: "Tailwind CSS" }, { name: "Mobile Apps" }],
-        image: "/assets/work/lebricoleur1.png",
+        image: "/assets/work/lebricoleur6.png",
         images: ["/assets/work/lebricoleur6.png", "/assets/work/lebricoleur5.png", "/assets/work/lebricoleur4.png", "/assets/work/lebricoleur7.png"],
         live: "https://app.lebricoleur.cm/",
         github: "",
     },
     {
         num: "02",
-        category: "fullstack",
+        category: "Fullstack",
         title: "Système de Présence",
         description:
             "Une solution ERP complète pour la gestion des ressources humaines, permettant un suivi précis des présences et des rapports automatisés pour optimiser la productivité interne.",
-        stack: [{ name: "React" }, { name: "Django" }, { name: "PostgreSQL" }],
+        stack: [{ name: "React" }, { name: "Django" }, { name: "PostgreSQL" }, { name: "Framer Motion" }],
         image: "/assets/work/thumb1.png",
         images: ["/assets/work/thumb1.png"],
         live: "",
@@ -47,14 +47,14 @@ const projects = [
     },
     {
         num: "03",
-        category: "frontend",
-        title: "Site Web Corporatif",
+        category: "Fullstack",
+        title: "Solution web Edubullet",
         description:
-            "Vitrine numérique haute performance pour une entreprise technologique. Design minimaliste, navigation fluide et intégration d'animations interactives pour maximiser l'engagement utilisateur.",
-        stack: [{ name: "Next.js" }, { name: "Tailwind.css" }, { name: "Framer Motion" }],
-        image: "/assets/work/thumb2.png",
-        images: ["/assets/work/thumb2.png"],
-        live: "",
+            "La Plateforme de Gestion de Bulletins Scolaires est une solution SaaS complète pour la gestion complète qui automatise et modernise la gestion des bulletins de votre établissement. Elle permet de réduire de 70% le temps consacré à l'administration des notes tout en garantissant zéro erreur dans les calculs.",
+        stack: [{ name: "React" }, { name: "Bootstrap" }, { name: "Laravel" }],
+        image: "/assets/work/Edubullet1.png",
+        images: ["/assets/work/Edubullet1.png", "/assets/work/Edubullet2.png", "/assets/work/Edubullet3.png"],
+        live: "https://edubullet-pro.infinityfreeapp.com/",
         github: "",
     },
     {
@@ -203,8 +203,8 @@ const Work = () => {
                                     <div className="h-[460px] relative group flex justify-center items-center bg-zinc-900/50 border-2 border-transparent hover:border-accent/50 transition-all duration-500 rounded-xl overflow-hidden backdrop-blur-sm">
                                         {/* overlay with zoom indicator */}
                                         <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 cursor-pointer group/zoom" onClick={() => setIsModalOpen(true)}>
-                                            {/* Zoom icon - appears on hover */}
-                                            <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/zoom:opacity-100 transition-opacity duration-300">
+                                            {/* Zoom icon - always visible */}
+                                            <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300">
                                                 <div className="w-16 h-16 rounded-full bg-accent/90 flex items-center justify-center backdrop-blur-sm shadow-lg">
                                                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7" />
