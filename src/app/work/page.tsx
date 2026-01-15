@@ -135,7 +135,7 @@ const Work = () => {
                                 {project.title}
                             </h2>
                             {/* category */}
-                            <h3 className="text-white/60 text-lg capitalize">
+                            <h3 className="text-2xl text-accent font-bold capitalize">
                                 {project.category} project
                             </h3>
                             {/* description */}
