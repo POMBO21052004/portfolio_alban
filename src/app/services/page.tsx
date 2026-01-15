@@ -107,6 +107,16 @@ const Services = () => {
                             );
                         })}
                     </div>
+
+                    {/* CTA Section */}
+                    <div className="flex flex-col items-center justify-center gap-6 mt-12 py-8 border-t border-white/10">
+                        <h3 className="text-2xl md:text-3xl font-bold text-center text-white">
+                            Vous avez un projet spécifique en tête ? Discutons-en !
+                        </h3>
+                        <Link href="/contact" className="inline-flex items-center justify-center h-12 px-8 text-base font-medium text-primary bg-accent hover:bg-accent-hover rounded-full transition-all duration-300">
+                            Discutons de votre projet
+                        </Link>
+                    </div>
                 </motion.div>
             </div>
         </section>

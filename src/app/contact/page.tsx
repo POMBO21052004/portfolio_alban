@@ -125,9 +125,14 @@ const Contact = () => {
                                 <SelectContent>
                                     <SelectGroup>
                                         <SelectLabel>Sélectionnez un service</SelectLabel>
-                                        <SelectItem value="Développement Web">Développement Web</SelectItem>
+                                        <SelectItem value="Développement Front-End">Développement Front-End</SelectItem>
+                                        <SelectItem value="Développement Back-End">Développement Back-End</SelectItem>
+                                        <SelectItem value="Développement Full Stack">Développement Full Stack</SelectItem>
+                                        <SelectItem value="Développement Mobile (Android/IOS)">Développement Mobile (Android/IOS)</SelectItem>
                                         <SelectItem value="Design UI/UX">Design UI/UX</SelectItem>
-                                        <SelectItem value="Design de Logo">Design de Logo</SelectItem>
+                                        <SelectItem value="Analyse Technique & Audit">Analyse Technique & Audit</SelectItem>
+                                        <SelectItem value="Optimisation IA">Optimisation IA</SelectItem>
+                                        <SelectItem value="Autre">Autre</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
