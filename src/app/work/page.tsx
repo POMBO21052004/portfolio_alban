@@ -195,7 +195,7 @@ const Work = () => {
                         <Swiper
                             spaceBetween={30}
                             slidesPerView={1}
-                            className="xl:h-[520px] mb-12"
+                            className="h-[520px] mb-12"
                             onSlideChange={handleSlideChange}
                         >
                             {projects.map((project, index) => {
@@ -260,7 +260,7 @@ const Work = () => {
                             })}
                             {/* Custom Project Navigation */}
                             <ProjectNavigation
-                                containerStyles="flex gap-2 absolute right-0 bottom-[calc(50%_-_22px)] xl:bottom-0 z-20 w-full justify-between items-center"
+                                containerStyles="flex gap-2 absolute right-0 bottom-0 z-20 w-full justify-between items-center"
                                 iconStyles="text-[30px]"
                                 currentIndex={activeIndex}
                                 totalProjects={projects.length}
