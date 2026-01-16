@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import ContactInfoPopup from "@/components/ContactInfoPopup";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -49,11 +50,25 @@ const Contact = () => {
         service: "",
         message: "",
     });
+    const [file, setFile] = useState<File | null>(null);
     const [status, setStatus] = useState("");
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;
         setFormData((prev: any) => ({ ...prev, [name]: value }));
+    };
+
+    const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+        if (e.target.files && e.target.files[0]) {
+            const selectedFile = e.target.files[0];
+            if (selectedFile.size > 2 * 1024 * 1024) { // 2MB limit
+                alert("Le fichier est trop volumineux (Max 2Mo)");
+                e.target.value = ""; // Reset input
+                setFile(null);
+            } else {
+                setFile(selectedFile);
+            }
+        }
     };
 
     const handleSelectChange = (value: string) => {
@@ -64,13 +79,21 @@ const Contact = () => {
         e.preventDefault();
         setStatus("loading");
 
+        const data = new FormData();
+        data.append("firstname", formData.firstname);
+        data.append("lastname", formData.lastname);
+        data.append("email", formData.email);
+        data.append("phone", formData.phone);
+        data.append("service", formData.service);
+        data.append("message", formData.message);
+        if (file) {
+            data.append("file", file);
+        }
+
         try {
             const response = await fetch("/api/contact", {
                 method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(formData),
+                body: data, // Send FormData specifically
             });
 
             if (response.ok) {
@@ -83,6 +106,10 @@ const Contact = () => {
                     service: "",
                     message: "",
                 });
+                setFile(null);
+                // Reset file input visually if needed, though state null handles logic
+                const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
+                if (fileInput) fileInput.value = "";
             } else {
                 setStatus("error");
             }
@@ -145,6 +172,17 @@ const Contact = () => {
                                 onChange={handleChange}
                                 required
                             />
+                            {/* file upload - optional */}
+                            <div className="flex flex-col gap-2">
+                                <label htmlFor="file" className="text-white/60 text-sm ml-1">Pièce jointe (Optionnel, Max 2Mo)</label>
+                                <Input
+                                    id="file"
+                                    type="file"
+                                    onChange={handleFileChange}
+                                    accept=".pdf,.doc,.docx,.jpg,.jpeg,.png"
+                                    className="cursor-pointer file:cursor-pointer file:text-white/80 file:bg-accent/10 file:border-0 file:rounded-md file:mr-4 file:px-4 file:py-2 hover:file:bg-accent/20 transition-all"
+                                />
+                            </div>
                             {/* btn */}
                             <Button size="md" className="max-w-40" disabled={status === "loading"}>
                                 {status === "loading" ? "Envoi..." : "Envoyer"}
@@ -183,6 +221,7 @@ const Contact = () => {
                     </div>
                 </div>
             </div>
+            <ContactInfoPopup />
         </motion.section>
     );
 };

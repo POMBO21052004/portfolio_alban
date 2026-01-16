@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import {
     FaHtml5,
     FaCss3,
@@ -22,6 +23,7 @@ import {
     FaGraduationCap,
     FaCode,
     FaUserCircle,
+    FaCertificate,
 } from "react-icons/fa";
 import { SiTailwindcss, SiNextdotjs, SiDjango, SiLaravel, SiMysql, SiDocker } from "react-icons/si";
 
@@ -34,6 +36,8 @@ import {
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import CertificationModal from "@/components/CertificationModal";
 
 const about = {
     icon: <FaUserCircle />,
@@ -238,7 +242,42 @@ const skills = {
     ],
 };
 
+const certifications = {
+    icon: <FaCertificate />,
+    title: "Mes certifications",
+    description:
+        "Certifications professionnelles validant mes compétences techniques et mon engagement dans l'apprentissage continu.",
+    items: [
+        {
+            name: "D-Clic",
+            issuer: "Certification Professionnelle",
+            date: "Novembre 2025",
+            image: "/assets/certifications/Attestation_dclic_1.png",
+            description: "Certification professionnelle D-Clic validant les compétences numériques et digitales."
+        },
+    ] as Array<{
+        name: string;
+        issuer: string;
+        date: string;
+        image: string;
+        description?: string;
+    }>,
+};
+
 const Resume = () => {
+    const [selectedCertification, setSelectedCertification] = useState<typeof certifications.items[0] | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const handleCertificationClick = (cert: typeof certifications.items[0]) => {
+        setSelectedCertification(cert);
+        setIsModalOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalOpen(false);
+        setTimeout(() => setSelectedCertification(null), 300);
+    };
+
     return (
         <motion.div
             initial={{ opacity: 0 }}
@@ -257,6 +296,7 @@ const Resume = () => {
                         <TabsTrigger value="experience">Expérience</TabsTrigger>
                         <TabsTrigger value="education">Formation</TabsTrigger>
                         <TabsTrigger value="skills">Compétences</TabsTrigger>
+                        <TabsTrigger value="certifications">Certifications</TabsTrigger>
                         <TabsTrigger value="about">À propos</TabsTrigger>
                     </TabsList>
 
@@ -406,6 +446,72 @@ const Resume = () => {
                             </div>
                         </TabsContent>
 
+                        {/* certifications */}
+                        <TabsContent value="certifications" className="w-full">
+                            <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                                <div className="flex items-center gap-4 justify-center xl:justify-start">
+                                    <div className="text-4xl text-accent">{certifications.icon}</div>
+                                    <h3 className="text-4xl font-bold">{certifications.title}</h3>
+                                </div>
+                                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                                    {certifications.description}
+                                </p>
+                                <ScrollArea className="h-[400px]">
+                                    {certifications.items.length > 0 ? (
+                                        <ul className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
+                                            {certifications.items.map((item, index) => {
+                                                return (
+                                                    <li
+                                                        key={index}
+                                                        onClick={() => handleCertificationClick(item)}
+                                                        className="bg-[#232329] rounded-xl overflow-hidden cursor-pointer group hover:border-accent border border-transparent transition-all duration-300"
+                                                    >
+                                                        {/* Image */}
+                                                        <div className="relative w-full aspect-[2/1] bg-white overflow-hidden">
+                                                            <Image
+                                                                src={item.image}
+                                                                alt={item.name}
+                                                                fill
+                                                                className="object-contain group-hover:scale-105 transition-transform duration-300"
+                                                            />
+                                                            <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
+                                                                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-accent/90 text-primary px-4 py-2 rounded-full text-sm font-semibold">
+                                                                    Voir les détails
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        {/* Info */}
+                                                        <div className="p-4">
+                                                            <h4 className="text-lg font-bold text-white mb-2 group-hover:text-accent transition-colors">
+                                                                {item.name}
+                                                            </h4>
+                                                            <div className="flex items-center gap-2 text-white/60 text-sm mb-1">
+                                                                <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
+                                                                <p>{item.issuer}</p>
+                                                            </div>
+                                                            <p className="text-accent text-sm">{item.date}</p>
+                                                        </div>
+                                                    </li>
+                                                );
+                                            })}
+                                        </ul>
+                                    ) : (
+                                        <div className="flex flex-col items-center justify-center h-[300px] text-center">
+                                            <div className="text-6xl text-white/20 mb-4">
+                                                <FaCertificate />
+                                            </div>
+                                            <p className="text-white/60 text-lg">
+                                                Aucune certification pour le moment.
+                                            </p>
+                                            <p className="text-white/40 text-sm mt-2">
+                                                De nouvelles certifications seront ajoutées prochainement.
+                                            </p>
+                                        </div>
+                                    )}
+                                </ScrollArea>
+                            </div>
+                        </TabsContent>
+
                         {/* about */}
                         <TabsContent value="about" className="w-full text-center xl:text-left">
                             <div className="flex flex-col gap-[30px]">
@@ -439,6 +545,12 @@ const Resume = () => {
                     </div>
                 </Tabs>
             </div>
+
+            <CertificationModal
+                isOpen={isModalOpen}
+                onClose={handleCloseModal}
+                certification={selectedCertification}
+            />
         </motion.div>
     );
 };
