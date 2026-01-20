@@ -129,7 +129,7 @@ const education = {
             degree: "Licence Génie Logiciel",
             duration: "2024 - 2025",
             location: "https://maps.google.com/?q=IUT+Douala",
-            details: "Spécialisation en architectures micro-services et sécurité applicative. Projet de fin d'études sur l'IA appliquée à la maintenance prédictive."
+            details: "Conception d'un SaaS de prise de rendez-vous pour les établissements de santé, intégrant Trello pour la communication lors de consultations à distance."
         },
         {
             institution: "IUT Douala",
