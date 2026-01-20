@@ -143,7 +143,7 @@ const education = {
             degree: "Baccalauréat C",
             duration: "2021 - 2022",
             location: "https://maps.google.com/?q=Institut+Polyvalent+Minfang+Douala",
-            details: "Mention Bien. Excellence en Mathématiques et Informatiquesg."
+            details: "Mention Bien. Excellence en Mathématiques et Informatiques."
         },
     ],
 };
