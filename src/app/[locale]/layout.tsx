@@ -25,6 +25,28 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       icon: "/logo.png",
     },
     manifest: "/manifest.json",
+    openGraph: {
+      title: t("ogTitle"),
+      description: t("ogDescription"),
+      url: "https://portfolio-alban.vercel.app", // Fallback URL, typically set via env
+      siteName: "Pombo Mbe Alban Portfolio",
+      images: [
+        {
+          url: "/logo.png",
+          width: 800,
+          height: 600,
+          alt: t("title"),
+        },
+      ],
+      locale: locale,
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("ogTitle"),
+      description: t("ogDescription"),
+      images: ["/logo.png"],
+    },
     appleWebApp: {
       capable: true,
       statusBarStyle: "default",

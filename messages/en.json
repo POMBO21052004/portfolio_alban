@@ -1,7 +1,9 @@
 {
     "Metadata": {
         "title": "Pombo Mbe Alban | Full Stack Developer",
-        "description": "22-year-old Full-Stack Web Developer, passionate about creating modern and intuitive applications."
+        "description": "22-year-old Full-Stack Web Developer, passionate about creating modern and intuitive applications.",
+        "ogTitle": "Pombo Mbe Alban - Full Stack Developer",
+        "ogDescription": "Explore my portfolio: modern web solutions, from reactive Front-End to robust Back-End."
     },
     "HomePage": {
         "greeting": "Hello",
