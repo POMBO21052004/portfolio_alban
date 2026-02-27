@@ -18,6 +18,7 @@
         "services": "services",
         "resume": "cv",
         "work": "projets",
+        "blog": "blog",
         "contact": "contact"
     },
     "Header": {
@@ -323,7 +324,7 @@
         "prevProject": "Projet précédent",
         "nextProject": "Projet suivant",
         "prevImage": "Image précédente",
-        "nextImage": "Image suivante",
+        "nextImage": "Next image",
         "close": "Fermer",
         "items": {
             "01": {
@@ -392,5 +393,65 @@
         "projects": "Projets réalisés",
         "technos": "Technologies maîtrisées",
         "commits": "Commits GitHub"
+    },
+    "Blog": {
+        "title": "Mon",
+        "titleAccent": "Blog",
+        "description": "Retrouvez mes derniers articles sur le développement web, le design et les nouvelles technologies.",
+        "readMore": "Lire plus",
+        "backToList": "Retour à la liste",
+        "share": "Partager",
+        "copyLink": "Copier le lien",
+        "linkCopied": "Lien copié !",
+        "shareTitle": "Partager cet article",
+        "shareMessage": "🚀 Découvrez mon nouvel article : {title}\n\n{excerpt}\n\nLire la suite ici : ",
+        "posts": [
+            {
+                "id": 1,
+                "slug": "l-importance-de-la-clean-architecture",
+                "title": "L'importance de la Clean Architecture",
+                "date": "27 Février 2026",
+                "category": "Architecture",
+                "image": "/assets/blog/blog_clean_architecture.png",
+                "excerpt": "Découvrez pourquoi une architecture propre est essentielle pour la maintenabilité et l'évolutivité de vos projets.",
+                "content": "La Clean Architecture, popularisée par Robert C. Martin, n'est pas seulement une mode mais un impératif pour tout projet sérieux. En séparant les règles métier des détails techniques (frameworks, bases de données), elle permet de changer de technologie sans réécrire le cœur de l'application.\n\nElle facilite les tests unitaires et garantit que le code reste lisible et compréhensible même après des années de maintenance. Investir du temps dans l'architecture au début, c'est économiser des mois de dette technique par la suite. Dans cet article, nous verrons comment structurer vos projets pour qu'ils résistent à l'épreuve du temps."
+            },
+            {
+                "id": 2,
+                "slug": "l-ia-et-le-developpeur-pourquoi-elle-ne-nous-remplacera-pas",
+                "title": "L'IA dans le développement : pourquoi elle ne remplacera jamais l'humain",
+                "date": "25 Février 2026",
+                "category": "IA",
+                "image": "/assets/blog/blog_ai_dev.png",
+                "excerpt": "L'IA transforme nos méthodes de travail, mais la créativité et le jugement critique restent l'apanage des développeurs.",
+                "content": "L'IA, de Copilot à ChatGPT, est devenue le compagnon indispensable du développeur moderne. Elle accélère le codage répétitif et aide grandement au débogage. Cependant, elle ne remplacera jamais le développeur pour une raison simple : le développement n'est pas seulement l'écriture de lignes de code, c'est avant tout la résolution de problèmes métier complexes.\n\nL'IA manque d'empathie, de vision globale d'un produit, et surtout de la capacité à comprendre l'intent humaine profonde derrière une fonctionnalité. Elle est un outil puissant pour l'artisan, mais c'est l'artisan qui possède et porte la vision. Découvrez pourquoi l'avenir du développement est une collaboration homme-machine augmentée."
+            },
+            {
+                "id": 3,
+                "slug": "l-art-du-design-system-creer-une-harmonie-entre-code-et-design",
+                "title": "L'Art du Design System : Créer une harmonie entre code et design",
+                "date": "27 Février 2026",
+                "category": "Design",
+                "image": "/assets/blog/blog_design_system.png",
+                "excerpt": "Découvrez comment un Design System bien structuré peut accélérer votre développement tout en garantissant une expérience utilisateur cohérente.",
+                "content": "Un Design System n'est pas qu'un simple guide de style. C'est un véritable produit au service des autres produits. En centralisant les composants, les couleurs et la typographie, il permet aux designers et développeurs de parler le même langage.\n\nDans cet article, nous explorerons les piliers d'un système robuste : des jetons de design (design tokens) aux composants réutilisables. Nous verrons comment la mise en place d'une telle bibliothèque réduit les allers-retours, diminue les bugs UI et permet de se concentrer sur les fonctionnalités à haute valeur ajoutée. Apprenez à transformer l'anarchie visuelle en une symphonie ordonnée."
+            },
+            {
+                "id": 4,
+                "slug": "reussir-en-freelance-5-conseils-pour-transformer-une-idee-en-produit",
+                "title": "Réussir en Freelance : 5 conseils pour transformer une idée en produit",
+                "date": "27 Février 2026",
+                "category": "Freelance",
+                "image": "/assets/blog/blog_freelance_success.png",
+                "excerpt": "Passer d'une idée à un produit fini demande plus que du code. Voici mes conseils pour réussir vos projets freelance de A à Z.",
+                "content": "Travailler en freelance, c'est porter plusieurs casquettes : développeur, chef de projet, et parfois même designer. La clé de la réussite réside dans la gestion de l'incertitude et la communication avec le client.\n\nPremièrement, définissez clairement le MVP (Produit Minimum Viable). Ne cherchez pas la perfection immédiate, mais la valeur. Deuxièmement, automatisez vos processus de déploiement pour gagner du temps. Enfin, soignez la documentation pour que votre client se sente accompagné même après la livraison. Découvrez comment ces petites habitudes font la différence entre un simple prestataire et un partenaire stratégique."
+            }
+        ]
+    },
+    "NotFound": {
+        "title": "404",
+        "subtitle": "Page Introuvable",
+        "description": "Oups ! La page que vous recherchez semble avoir disparu dans le cyberespace.",
+        "backHome": "Retour à l'accueil"
     }
 }

@@ -18,6 +18,7 @@
         "services": "services",
         "resume": "resume",
         "work": "projects",
+        "blog": "blog",
         "contact": "contact"
     },
     "Header": {
@@ -392,5 +393,65 @@
         "projects": "Projects completed",
         "technos": "Technologies mastered",
         "commits": "GitHub commits"
+    },
+    "Blog": {
+        "title": "My",
+        "titleAccent": "Blog",
+        "description": "Find my latest articles on web development, design, and new technologies.",
+        "readMore": "Read more",
+        "backToList": "Back to list",
+        "share": "Share",
+        "copyLink": "Copy link",
+        "linkCopied": "Link copied!",
+        "shareTitle": "Share this article",
+        "shareMessage": "🚀 Check out my new article: {title}\n\n{excerpt}\n\nRead more here: ",
+        "posts": [
+            {
+                "id": 1,
+                "slug": "l-importance-de-la-clean-architecture",
+                "title": "The Importance of Clean Architecture",
+                "date": "February 27, 2026",
+                "category": "Architecture",
+                "image": "/assets/blog/blog_clean_architecture.png",
+                "excerpt": "Discover why clean architecture is essential for the maintainability and scalability of your projects.",
+                "content": "Clean Architecture, popularized by Robert C. Martin, is not just a trend but an imperative for any serious project. By separating business rules from technical details (frameworks, databases), it allows for technology changes without rewriting the application's core.\n\nIt facilitates unit testing and ensures the code remains readable and understandable even after years of maintenance. Investing time in architecture at the beginning saves months of technical debt later. In this article, we'll see how to structure your projects to stand the test of time."
+            },
+            {
+                "id": 2,
+                "slug": "l-ia-et-le-developpeur-pourquoi-elle-ne-nous-remplacera-pas",
+                "title": "AI in Development: Why it will never replace humans",
+                "date": "February 25, 2026",
+                "category": "AI",
+                "image": "/assets/blog/blog_ai_dev.png",
+                "excerpt": "AI is transforming our working methods, but creativity and critical judgment remain the prerogative of developers.",
+                "content": "AI, from Copilot to ChatGPT, has become an indispensable companion for the modern developer. It speeds up repetitive coding and greatly helps in debugging. However, it will never replace the developer for one simple reason: development is not just writing lines of code, it's primarily about solving complex business problems.\n\nAI lacks empathy, global product vision, and especially the ability to understand the deep human intent behind a feature. It is a powerful tool for the craftsman, but it's the craftsman who owns and carries the vision. Discover why the future of development is an augmented man-machine collaboration."
+            },
+            {
+                "id": 3,
+                "slug": "l-art-du-design-system-creer-une-harmonie-entre-code-et-design",
+                "title": "The Art of Design Systems: Creating Harmony Between Code and Design",
+                "date": "February 27, 2026",
+                "category": "Design",
+                "image": "/assets/blog/blog_design_system.png",
+                "excerpt": "Discover how a well-structured Design System can accelerate your development while ensuring a consistent user experience.",
+                "content": "A Design System is more than just a style guide. It's a real product serving other products. By centralizing components, colors, and typography, it allows designers and developers to speak the same language.\n\nIn this article, we'll explore the pillars of a robust system: from design tokens to reusable components. We'll see how implementing such a library reduces back-and-forth, decreases UI bugs, and allows you to focus on high-value features. Learn how to transform visual anarchy into an ordered symphony."
+            },
+            {
+                "id": 4,
+                "slug": "reussir-en-freelance-5-conseils-pour-transformer-une-idee-en-produit",
+                "title": "Freelance Success: 5 Tips for Turning an Idea into a Product",
+                "date": "February 27, 2026",
+                "category": "Freelance",
+                "image": "/assets/blog/blog_freelance_success.png",
+                "excerpt": "Going from an idea to a finished product takes more than code. Here are my tips for succeeding in your freelance projects from A to Z.",
+                "content": "Working as a freelancer means wearing many hats: developer, project manager, and sometimes even designer. The key to success lies in managing uncertainty and communicating with the client.\n\nFirst, clearly define the MVP (Minimum Viable Product). Don't aim for immediate perfection, but for value. Second, automate your deployment processes to save time. Finally, take care of documentation so your client feels supported even after delivery. Discover how these small habits make the difference between a simple provider and a strategic partner."
+            }
+        ]
+    },
+    "NotFound": {
+        "title": "404",
+        "subtitle": "Page Not Found",
+        "description": "Oops! The page you are looking for seems to have vanished into cyberspace.",
+        "backHome": "Back to Home"
     }
 }

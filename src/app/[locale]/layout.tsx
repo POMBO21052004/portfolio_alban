@@ -7,6 +7,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import InstallPWA from "@/components/InstallPWA";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {
+    metadataBase: new URL("https://portfolio-alban.vercel.app"),
     title: t("title"),
     description: t("description"),
     icons: {
@@ -83,6 +85,7 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <Header />
           <PageTransition>{children}</PageTransition>
+          <InstallPWA />
         </NextIntlClientProvider>
       </body>
     </html>
