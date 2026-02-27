@@ -319,6 +319,7 @@
         }
     },
     "Work": {
+        "all": "All",
         "live": "Live project",
         "github": "Github Repo",
         "prevProject": "Previous project",

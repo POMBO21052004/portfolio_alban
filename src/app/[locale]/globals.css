@@ -18,16 +18,14 @@ html {
   background: var(--background);
   background-image: radial-gradient(circle at 50% 0%, #2a2a35 0%, #1c1c22 70%);
   min-height: 100%;
+  overflow-x: hidden;
 }
 
 body {
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
   min-height: 100vh;
-  zoom: 0.9;
-  /* Global scale reduction */
-  background: transparent;
-  /* Ensure body doesn't obscure html background if needed, though they match */
+  overflow-x: hidden;
 }
 
 @layer utilities {
