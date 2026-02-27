@@ -13,6 +13,8 @@ interface ImageLightboxProps {
     projectTitle: string;
 }
 
+import { useTranslations } from "next-intl";
+
 const ImageLightbox: React.FC<ImageLightboxProps> = ({
     isOpen,
     onClose,
@@ -22,6 +24,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
     onNext,
     projectTitle,
 }) => {
+    const t = useTranslations("Work");
     if (!isOpen) return null;
 
     return (
@@ -33,7 +36,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
             <button
                 className="absolute top-8 right-8 w-12 h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center transition-all duration-300 z-50"
                 onClick={onClose}
-                aria-label="Fermer"
+                aria-label={t("close")}
             >
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -62,7 +65,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
                             onPrevious();
                         }}
                         className="absolute left-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-300"
-                        aria-label="Image précédente"
+                        aria-label={t("prevImage")}
                     >
                         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -74,7 +77,7 @@ const ImageLightbox: React.FC<ImageLightboxProps> = ({
                             onNext();
                         }}
                         className="absolute right-8 top-1/2 -translate-y-1/2 w-14 h-14 rounded-full bg-white/10 hover:bg-white/20 backdrop-blur-sm flex items-center justify-center transition-all duration-300"
-                        aria-label="Image suivante"
+                        aria-label={t("nextImage")}
                     >
                         <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

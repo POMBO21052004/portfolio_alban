@@ -21,7 +21,10 @@ interface ServiceModalProps {
     } | null;
 }
 
+import { useTranslations } from "next-intl";
+
 const ServiceModal = ({ isOpen, onClose, service }: ServiceModalProps) => {
+    const t = useTranslations("Services");
     if (!service) return null;
 
     return (
@@ -75,7 +78,7 @@ const ServiceModal = ({ isOpen, onClose, service }: ServiceModalProps) => {
                                 <div>
                                     <h4 className="text-xl font-bold text-accent mb-3 flex items-center gap-2">
                                         <span className="text-2xl">🤔</span>
-                                        C'est quoi exactement ?
+                                        {t("modal.whatIsIt")}
                                     </h4>
                                     <p className="text-white/80 leading-relaxed">
                                         {service.detailedExplanation.whatIsIt}
@@ -86,7 +89,7 @@ const ServiceModal = ({ isOpen, onClose, service }: ServiceModalProps) => {
                                 <div>
                                     <h4 className="text-xl font-bold text-accent mb-3 flex items-center gap-2">
                                         <span className="text-2xl">⚙️</span>
-                                        Comment ça marche ?
+                                        {t("modal.howItWorks")}
                                     </h4>
                                     <ul className="space-y-2">
                                         {service.detailedExplanation.howItWorks.map((step, index) => (
@@ -102,7 +105,7 @@ const ServiceModal = ({ isOpen, onClose, service }: ServiceModalProps) => {
                                 <div>
                                     <h4 className="text-xl font-bold text-accent mb-3 flex items-center gap-2">
                                         <span className="text-2xl">✨</span>
-                                        Les avantages pour vous
+                                        {t("modal.benefits")}
                                     </h4>
                                     <ul className="space-y-2">
                                         {service.detailedExplanation.benefits.map((benefit, index) => (
@@ -118,7 +121,7 @@ const ServiceModal = ({ isOpen, onClose, service }: ServiceModalProps) => {
                                 <div>
                                     <h4 className="text-xl font-bold text-accent mb-3 flex items-center gap-2">
                                         <span className="text-2xl">💡</span>
-                                        Exemples concrets
+                                        {t("modal.examples")}
                                     </h4>
                                     <ul className="space-y-2">
                                         {service.detailedExplanation.examples.map((example, index) => (

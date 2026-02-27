@@ -1,0 +1,394 @@
+{
+    "Metadata": {
+        "title": "Pombo Mbe Alban | Développeur Full Stack",
+        "description": "Développeur Web Full-Stack agé de 22 ans, passionné par la création d'applications modernes et intuitives."
+    },
+    "HomePage": {
+        "greeting": "Bonjour",
+        "greetingEvening": "Bonsoir",
+        "role": "Développeur Full Stack",
+        "title": "je suis",
+        "description": "Développeur Web Full-Stack agé de 22 ans, passionné par la création d’application moderne et intuitives, je transforme des idées complexes en code élégant. curieux et créatif, j’ai acquis de solides compétences en développement front-end et back-end, me permettant de concevoir des solutions complètes et performantes.",
+        "downloadCV": "Télécharger CV"
+    },
+    "Nav": {
+        "home": "accueil",
+        "services": "services",
+        "resume": "cv",
+        "work": "projets",
+        "contact": "contact"
+    },
+    "Header": {
+        "hireMe": "M'embaucher"
+    },
+    "Services": {
+        "title": "Solutions Numériques",
+        "titleAccent": "Sur Mesure",
+        "description": "Des services technologiques avancés pour concrétiser vos idées en solutions numériques.",
+        "ctaTitle": "Vous avez un projet spécifique en tête ? Discutons-en !",
+        "ctaButton": "Discutons de votre projet",
+        "learnMore": "En savoir plus",
+        "modal": {
+            "whatIsIt": "C'est quoi exactement ?",
+            "howItWorks": "Comment ça marche ?",
+            "benefits": "Les avantages pour vous",
+            "examples": "Exemples concrets"
+        },
+        "items": {
+            "01": {
+                "title": "Développement Front-End",
+                "description": "Création d'interfaces utilisateur modernes, réactives et intuitives avec React et Next.js.",
+                "detailedExplanation": {
+                    "whatIsIt": "Le développement Front-End, c'est tout ce que vous voyez et avec quoi vous interagissez sur un site web ou une application : les boutons, les menus, les formulaires, les animations... C'est la partie visible de l'iceberg ! Imaginez-le comme la décoration et l'aménagement d'une maison : c'est ce qui rend l'espace agréable, fonctionnel et facile à utiliser.",
+                    "howItWorks": [
+                        "Je commence par comprendre vos besoins et ceux de vos utilisateurs",
+                        "Je crée des maquettes visuelles (design) pour vous montrer à quoi ressemblera votre site",
+                        "Je transforme ces maquettes en code fonctionnel avec React et Next.js (technologies modernes et performantes)",
+                        "Je m'assure que tout fonctionne parfaitement sur tous les appareils (ordinateur, tablette, smartphone)",
+                        "Je teste et j'optimise pour que votre site soit rapide et fluide"
+                    ],
+                    "benefits": [
+                        "Une interface moderne et professionnelle qui inspire confiance",
+                        "Une navigation intuitive : vos visiteurs trouvent facilement ce qu'ils cherchent",
+                        "Un site qui s'adapte à tous les écrans (responsive design)",
+                        "Des temps de chargement rapides pour ne pas perdre vos visiteurs",
+                        "Un design unique qui reflète votre identité de marque"
+                    ],
+                    "examples": [
+                        "Un site vitrine pour votre entreprise avec un design élégant et des animations fluides",
+                        "Une boutique en ligne avec un panier d'achat intuitif et un processus de commande simplifié",
+                        "Un tableau de bord pour gérer vos données avec des graphiques interactifs",
+                        "Une application web pour réserver des services en quelques clics"
+                    ]
+                }
+            },
+            "02": {
+                "title": "Développement Back-End",
+                "description": "Conception d'architectures robustes, API sécurisées et gestion de données performantes avec Laravel et Django Rest Framework.",
+                "detailedExplanation": {
+                    "whatIsIt": "Le développement Back-End, c'est la partie invisible mais essentielle d'un site ou d'une application. C'est le moteur qui fait tourner tout le système : gestion des données, traitement des informations, sécurité, connexion avec d'autres services... Si le Front-End est la décoration de la maison, le Back-End c'est la plomberie, l'électricité et les fondations !",
+                    "howItWorks": [
+                        "J'analyse vos besoins en termes de données et de fonctionnalités",
+                        "Je conçois une architecture solide et évolutive pour votre système",
+                        "Je crée une base de données organisée pour stocker vos informations de manière sécurisée",
+                        "Je développe des API (points de connexion) pour que votre site communique avec d'autres services",
+                        "Je mets en place des systèmes de sécurité pour protéger vos données et celles de vos utilisateurs"
+                    ],
+                    "benefits": [
+                        "Un système fiable qui fonctionne 24h/24 sans interruption",
+                        "Vos données sont sécurisées et protégées contre les attaques",
+                        "Une architecture évolutive : facile d'ajouter de nouvelles fonctionnalités plus tard",
+                        "Des performances optimales même avec beaucoup d'utilisateurs simultanés",
+                        "Une gestion automatisée de vos processus métier"
+                    ],
+                    "examples": [
+                        "Un système de gestion de clients avec historique des commandes et facturation automatique",
+                        "Une API pour connecter votre site web à votre application mobile",
+                        "Un système d'authentification sécurisé avec gestion des rôles et permissions",
+                        "Une plateforme de réservation avec gestion des disponibilités en temps réel"
+                    ]
+                }
+            },
+            "03": {
+                "title": "Analyse Technique",
+                "description": "Audit approfondi de vos systèmes et stratégie technologique pour optimiser vos performances.",
+                "detailedExplanation": {
+                    "whatIsIt": "L'analyse technique, c'est comme un bilan de santé pour votre site web ou votre application. Je passe en revue tous les aspects techniques pour identifier ce qui fonctionne bien, ce qui pourrait être amélioré, et les problèmes potentiels. C'est un diagnostic complet qui vous aide à prendre les bonnes décisions pour votre projet digital.",
+                    "howItWorks": [
+                        "J'examine votre site ou application existante dans les moindres détails",
+                        "Je teste les performances : vitesse de chargement, temps de réponse, consommation de ressources",
+                        "J'analyse la sécurité pour détecter les vulnérabilités potentielles",
+                        "Je vérifie la qualité du code et l'architecture du système",
+                        "Je vous fournis un rapport détaillé avec des recommandations concrètes et priorisées"
+                    ],
+                    "benefits": [
+                        "Vous savez exactement où en est votre projet et ce qui doit être amélioré",
+                        "Vous évitez les problèmes coûteux avant qu'ils ne surviennent",
+                        "Vous optimisez vos coûts en identifiant les gaspillages de ressources",
+                        "Vous prenez des décisions éclairées basées sur des données concrètes",
+                        "Vous améliorez l'expérience de vos utilisateurs grâce aux optimisations"
+                    ],
+                    "examples": [
+                        "Audit de performance d'un site e-commerce qui charge lentement",
+                        "Analyse de sécurité avant le lancement d'une nouvelle application",
+                        "Évaluation technique d'un projet existant avant de le faire évoluer",
+                        "Diagnostic de problèmes récurrents sur une plateforme web"
+                    ]
+                }
+            },
+            "04": {
+                "title": "Développement Android",
+                "description": "Réalisation d'applications mobiles natives et cross-platform performantes et ergonomiques à l'aide de Flutter.",
+                "detailedExplanation": {
+                    "whatIsIt": "Le développement Android, c'est la création d'applications mobiles pour smartphones et tablettes. Avec Flutter, je peux créer une seule application que fonctionne à la fois sur Android ET iOS, ce qui vous fait gagner du temps et de l'argent. C'est comme avoir votre entreprise dans la poche de vos clients !",
+                    "howItWorks": [
+                        "Je définis avec vous les fonctionnalités de votre application mobile",
+                        "Je crée un design adapté aux petits écrans et à l'utilisation tactile",
+                        "Je développe l'application avec Flutter pour qu'elle fonctionne sur Android et iOS",
+                        "J'intègre les fonctionnalités natives du téléphone (caméra, GPS, notifications...)",
+                        "Je teste sur différents appareils et je publie sur les stores (Google Play, App Store)"
+                    ],
+                    "benefits": [
+                        "Vos clients vous ont toujours à portée de main",
+                        "Une seule application pour Android ET iOS = économies importantes",
+                        "Accès aux fonctionnalités du téléphone (GPS, appareil photo, notifications push...)",
+                        "Possibilité de fonctionner hors ligne",
+                        "Présence sur les stores officiels renforce votre crédibilité"
+                    ],
+                    "examples": [
+                        "Une application de livraison avec suivi GPS en temps réel",
+                        "Une app de fidélité avec scan de QR codes et notifications de promotions",
+                        "Une application de réservation de services avec paiement intégré",
+                        "Un outil de gestion pour vos équipes terrain avec synchronisation des données"
+                    ]
+                }
+            },
+            "05": {
+                "title": "Optimisation IA",
+                "description": "Intégration d'intelligence artificielle pour automatiser vos processus et analyser vos données.",
+                "detailedExplanation": {
+                    "whatIsIt": "L'optimisation IA, c'est l'utilisation de l'intelligence artificielle pour rendre votre entreprise plus efficace. L'IA peut automatiser des tâches répétitives, analyser de grandes quantités de données, faire des prédictions, ou même discuter avec vos clients. C'est comme avoir un assistant super intelligent qui travaille 24h/24 sans se fatiguer !",
+                    "howItWorks": [
+                        "J'identifie les tâches répétitives ou chronophages dans votre activité",
+                        "Je choisis les technologies IA les plus adaptées à vos besoins",
+                        "J'intègre des solutions d'IA dans vos systèmes existants",
+                        "Je forme l'IA avec vos données pour qu'elle comprenne votre contexte",
+                        "Je mets en place des tableaux de bord pour suivre les résultats"
+                    ],
+                    "benefits": [
+                        "Gain de temps considérable sur les tâches répétitives",
+                        "Réduction des erreurs humaines",
+                        "Disponibilité 24h/24 pour vos clients (chatbots)",
+                        "Analyses et prédictions basées sur vos données",
+                        "Vous vous concentrez sur les tâches à forte valeur ajoutée"
+                    ],
+                    "examples": [
+                        "Un chatbot intelligent pour répondre aux questions fréquentes de vos clients",
+                        "Un système de recommandation de produits basé sur les préférences des utilisateurs",
+                        "Une analyse automatique de documents pour extraire les informations importantes",
+                        "Un outil de prédiction des ventes pour mieux gérer vos stocks"
+                    ]
+                }
+            },
+            "06": {
+                "title": "UI/UX Design & Prototypage",
+                "description": "Conception d'interfaces intuitives et esthétiques centrées sur l'utilisateur.",
+                "detailedExplanation": {
+                    "whatIsIt": "Le design UI (Interface Utilisateur) et UX (Experience Utilisateur) vise à rendre votre application non seulement belle, mais surtout facile et agréable à utiliser pour vos clients.",
+                    "howItWorks": [
+                        "Recherche utilisateur et personas",
+                        "Création de wireframes",
+                        "Design haute fidélité sur Figma",
+                        "Prototypage interactif",
+                        "Tests utilisateurs"
+                    ],
+                    "benefits": [
+                        "Réduction du taux de rebond",
+                        "Augmentation de l'engagement utilisateur",
+                        "Identité visuelle forte et professionnelle",
+                        "Validation du concept avant le code"
+                    ],
+                    "examples": [
+                        "Maquettes d'applications mobiles",
+                        "Refonte graphique de sites existants",
+                        "Systèmes de design (Design Systems)"
+                    ]
+                }
+            }
+        }
+    },
+    "Resume": {
+        "tabs": {
+            "experience": "Expérience",
+            "education": "Formation",
+            "skills": "Compétences",
+            "certifications": "Certifications",
+            "about": "À propos"
+        },
+        "about": {
+            "title": "À propos de moi",
+            "description": "Développeur Full Stack passionné et rigoureux, je conçois des solutions digitales sur mesure alliant performance technique et esthétique soignée. Fort d'une double compétence en développement Front-end (React, Next.js) et Back-end (Django, Laravel), je m'engage à livrer un code propre, maintenable et évolutif. Toujours en veille technologique, je suis prêt à intégrer votre équipe pour relever des défis ambitieux.",
+            "fields": {
+                "name": "Nom",
+                "phone": "Téléphone",
+                "experience": "Expérience",
+                "nationality": "Nationalité",
+                "email": "Email",
+                "freelance": "Freelance",
+                "city": "Ville",
+                "languages": "Langues"
+            },
+            "values": {
+                "experience": "3+ Ans",
+                "nationality": "Camerounais",
+                "freelance": "Disponible",
+                "city": "Douala, Cameroun",
+                "languages": "Français"
+            }
+        },
+        "experience": {
+            "title": "Mon expérience",
+            "description": "Un parcours riche en projets concrets et en collaborations techniques, démontrant ma capacité à m'adapter et à livrer de la valeur rapidement.",
+            "items": [
+                {
+                    "company": "Digiplus Consulting Sarl",
+                    "position": "Stagiaire Développeur Web",
+                    "duration": "Nov 2025 - Jan 2026",
+                    "details": "Réalisation du projet 'Le Bricoleur', plateforme de mise en relation client-technicien. Développement Fullstack (React/Laravel), intégration de la géolocalisation et du système de paiement."
+                },
+                {
+                    "company": "PANZANI CAMEROUN S.A",
+                    "position": "Stagiaire Analyste Info",
+                    "duration": "Jan 2025 - Mar 2025",
+                    "details": "Conception et déploiement de l'application 'GTP' (Gestion de Temps et Présence) pour optimiser le suivi RH. Automatisation des fiches de pointage et reporting des heures via Dashboard interactif."
+                },
+                {
+                    "company": "CCN Technologies",
+                    "position": "Stagiaire Full Stack",
+                    "duration": "Mar 2024 - Mai 2024",
+                    "details": "Participation au développement d'un site e-commerce. Intégration de maquettes Figma pixel-perfect. Gestion de l'authentification et des paiements en ligne via Stripe."
+                }
+            ]
+        },
+        "education": {
+            "title": "Ma formation",
+            "description": "Une base académique solide renforcée par une pratique intensive, assurant une compréhension profonde des principes du génie logiciel.",
+            "items": [
+                {
+                    "institution": "IUT Douala",
+                    "degree": "Licence Génie Logiciel",
+                    "duration": "2024 - 2025",
+                    "details": "Conception d'un SaaS de prise de rendez-vous pour les établissements de santé, intégrant Trello pour la communication lors de consultations à distance."
+                },
+                {
+                    "institution": "IUT Douala",
+                    "degree": "DUT en Génie Informatique",
+                    "duration": "2023 - 2024",
+                    "details": "Fondamentaux du développement web et mobile. Algorithmique avancée et structures de données. Administration systèmes et réseaux (Linux, Cisco)."
+                },
+                {
+                    "institution": "Institut Polyvalent Minfang",
+                    "degree": "Baccalauréat C",
+                    "duration": "2021 - 2022",
+                    "details": "Mention Bien. Excellence en Mathématiques et Informatiques."
+                }
+            ]
+        },
+        "skills": {
+            "title": "Mes compétences",
+            "description": "Maîtrise d'une stack technique complète allant du Front-end au Back-end. J'utilise des technologies modernes comme React et Next.js pour créer des interfaces dynamiques, couplées à des architectures robustes sous Django ou Laravel. Mon expertise inclut également la gestion de bases de données, la conteneurisation avec Docker et le design d'interfaces avec Figma.",
+            "level": {
+                "beginner": "Basique",
+                "intermediate": "Intermédiaire",
+                "advanced": "Avancé"
+            },
+            "categories": {
+                "frontend": "Front-End",
+                "backend": "Back-End",
+                "tools": "Outils & DevOps"
+            }
+        },
+        "certifications": {
+            "title": "Mes certifications",
+            "description": "Certifications professionnelles validant mes compétences techniques et mon engagement dans l'apprentissage continu.",
+            "viewDetails": "Voir les détails",
+            "noCertifications": "Aucune certification pour le moment.",
+            "upcomingCerts": "De nouvelles certifications seront ajoutées prochainement.",
+            "modal": {
+                "issuer": "Émetteur",
+                "date": "Date",
+                "description": "Description"
+            },
+            "items": [
+                {
+                    "name": "Développeur Web - Niveau Debutant",
+                    "issuer": "OIF",
+                    "date": "Novembre 2025",
+                    "description": "Certification intensive sur les métiers du numérique, validant des compétences avancées en développement web, design d'interface et gestion de projet digital."
+                },
+                {
+                    "name": "Développeur Web - Niveau Intermédiaire",
+                    "issuer": "OIF",
+                    "date": "Janvier 2025",
+                    "description": "Validation des compétences en architecture logicielle, développement d'applications robustes et intégration de solutions numériques complexes."
+                }
+            ]
+        }
+    },
+    "Work": {
+        "live": "Projet en direct",
+        "github": "Repo Github",
+        "prevProject": "Projet précédent",
+        "nextProject": "Projet suivant",
+        "prevImage": "Image précédente",
+        "nextImage": "Image suivante",
+        "close": "Fermer",
+        "items": {
+            "01": {
+                "title": "Le Bricoleur",
+                "category": "Frontend",
+                "description": "Une plateforme de mise en relation mettant en relation les utilisateurs avec des techniciens qualifiés au Cameroun pour des services de réparation et rénovation. Le service garantit des interventions rapides et des professionnels de confiance."
+            },
+            "02": {
+                "title": "Système de Présence",
+                "category": "Fullstack",
+                "description": "Une solution ERP complète pour la gestion des ressources humaines, permettant un suivi précis des présences et des rapports automatisés pour optimiser la productivité interne."
+            },
+            "03": {
+                "title": "Solution web Edubullet",
+                "category": "Fullstack",
+                "description": "La Plateforme de Gestion de Bulletins Scolaires est une solution SaaS complète pour la gestion complète qui automatise et modernise la gestion des bulletins de votre établissement. Elle permet de réduire de 70% le temps consacré à l'administration des notes tout en garantissant zéro erreur dans les calculs."
+            },
+            "04": {
+                "title": "Stock Master",
+                "category": "App Mobile",
+                "description": "Application mobile de gestion de stock complète et autonome avec interface Premium. Gestion centralisée des articles, traçabilité des mouvements, analyses statistiques avancées et support mode sombre/clair."
+            }
+        }
+    },
+    "Contact": {
+        "title": "Travaillons ensemble",
+        "description": "Intéressé par une collaboration ou vous avez une question ? Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.",
+        "form": {
+            "firstname": "Prénom",
+            "lastname": "Nom",
+            "email": "Adresse Email",
+            "phone": "Numéro de téléphone",
+            "service": "Sélectionnez un service",
+            "message": "Tapez votre message ici.",
+            "file": "Pièce jointe (Optionnel, Max 2Mo)",
+            "send": "Envoyer",
+            "sending": "Envoi...",
+            "success": "Votre message a été envoyé avec succès !",
+            "error": "Une erreur s'est produite. Veuillez réessayer.",
+            "fileTooLarge": "Le fichier est trop volumineux (Max 2Mo)"
+        },
+        "info": {
+            "phone": "Téléphone",
+            "email": "Email",
+            "address": "Adresse",
+            "addressValue": "Douala Cameroun, PK 14, Mont Sinai"
+        },
+        "services": {
+            "frontend": "Développement Front-End",
+            "backend": "Développement Back-End",
+            "fullstack": "Développement Full Stack",
+            "mobile": "Développement Mobile (Android/IOS)",
+            "design": "Design UI/UX",
+            "analysis": "Analyse Technique & Audit",
+            "ai": "Optimisation IA",
+            "other": "Autre"
+        },
+        "popup": {
+            "title": "Comment ça marche ?",
+            "step1": "Remplissez le formulaire avec votre demande.",
+            "step2": "Un email de confirmation vous sera envoyé instantanément."
+        }
+    },
+    "Stats": {
+        "experience": "Années d'expérience",
+        "projects": "Projets réalisés",
+        "technos": "Technologies maîtrisées",
+        "commits": "Commits GitHub"
+    }
+}

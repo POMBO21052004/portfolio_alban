@@ -1,36 +1,57 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rapport d'Analyse du Projet : Portfolio Next
 
-## Getting Started
+Ce document présente une analyse détaillée du projet de portfolio, incluant son architecture technique, ses composants clés et ses fonctionnalités.
 
-First, run the development server:
+## 🛠️ Stack Technique
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Le projet utilise les technologies les plus modernes de l'écosystème React :
+
+- **Framework** : [Next.js 16 (App Router)](https://nextjs.org) - Utilisation intensive du routing basé sur le système de fichiers et des composants client/serveur.
+- **Bibliothèque UI** : [React 19](https://react.dev)
+- **Styling** : [Tailwind CSS 4](https://tailwindcss.com) - Approche "Utility-first" pour un design rapide et cohérent.
+- **Animations** : [Framer Motion](https://www.framer.com/motion/) - Utilisé pour les transitions de pages et les interactions fluides.
+- **Typographie** : JetBrains Mono (Via Google Fonts).
+- **Icônes** : Lucide React et React Icons (Font Awesome, Bootstrap Icons, Simple Icons).
+- **Composants UI** : Radix UI (Primitives pour des composants accessibles comme Select, Tabs, Tooltip).
+- **Gestion de Formulaires** : React Hook Form (avec intégration Nodemailer pour le backend).
+- **Autres** : 
+  - `Swiper` pour les carrousels de projets.
+  - `react-countup` pour les animations de statistiques.
+  - `nodemailer` pour la gestion des emails de contact.
+
+## 📁 Structure du Projet
+
+```mermaid
+graph TD
+    Root[portfolio/] --> Src[src/]
+    Root --> Config[Configuration Files]
+    Src --> App[app/ - Routes]
+    Src --> Comp[components/ - UI]
+    Src --> Lib[lib/ - Utils]
+    App --> Home[page.tsx - Landing]
+    App --> Services[services/ - Offres]
+    App --> Resume[resume/ - CV]
+    App --> Work[work/ - Projets]
+    App --> Contact[contact/ - Formulaire]
+    Comp --> UI[ui/ - Primitives]
+    Comp --> Layout[Header, Nav, Photo, Stats...]
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Fonctionnalités Clés
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1.  **Page d'Accueil Dynamique** : Salutations automatiques ("Bonjour" / "Bonsoir") basées sur l'heure locale.
+2.  **Présentation des Services** : Modales détaillées (`ServiceModal`) expliquant chaque domaine d'expertise.
+3.  **Portfolio de Projets** : Slider interactif avec Swiper, incluant une vue détaillée des stacks techniques et des liens vers les démos/GitHub.
+4.  **CV Interactif** : Système d'onglets pour naviguer entre Expérience, Formation, Compétences et À propos.
+5.  **Formulaire de Contact** : Validation côté client et envoi d'emails via une route API intégrée (`/api/contact`).
+6.  **Transitions Fluides** : Effet de transition d'escalier (`StairTransition`) entre les pages pour une expérience premium.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🔍 Points d'Attention / Observations
 
-## Learn More
+- **Modularité** : Le code est très modulaire, avec une séparation claire entre les primitives UI et les composants métiers.
+- **Performance** : Utilisation de Next.js Font pour une optimisation automatique des polices.
+- **Responsive** : Le design est entièrement adaptatif (Mobile-first avec des points de rupture XL pour les écrans larges).
+- **Qualité du Code** : Utilisation de TypeScript pour une robustesse accrue.
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+> [!TIP]
+> Le projet est déjà très bien structuré. Pour les futures évolutions, l'ajout d'une base de données (ex: MongoDB ou PostgreSQL via Prisma) pour gérer les projets dynamiquement pourrait être envisagé.

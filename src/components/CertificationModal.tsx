@@ -17,7 +17,10 @@ interface CertificationModalProps {
     } | null;
 }
 
+import { useTranslations } from "next-intl";
+
 const CertificationModal = ({ isOpen, onClose, certification }: CertificationModalProps) => {
+    const t = useTranslations("Resume.certifications");
     if (!certification) return null;
 
     return (
@@ -73,16 +76,16 @@ const CertificationModal = ({ isOpen, onClose, certification }: CertificationMod
                                 {/* Details */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                     <div className="bg-[#232329] p-4 rounded-lg">
-                                        <p className="text-white/60 text-sm mb-1">Issuer</p>
+                                        <p className="text-white/60 text-sm mb-1">{t("modal.issuer")}</p>
                                         <p className="text-white font-semibold">{certification.issuer}</p>
                                     </div>
                                     <div className="bg-[#232329] p-4 rounded-lg">
-                                        <p className="text-white/60 text-sm mb-1">Date</p>
+                                        <p className="text-white/60 text-sm mb-1">{t("modal.date")}</p>
                                         <p className="text-white font-semibold">{certification.date}</p>
                                     </div>
                                     {certification.description && (
                                         <div className="bg-[#232329] p-4 rounded-lg md:col-span-2">
-                                            <p className="text-white/60 text-sm mb-1">Description</p>
+                                            <p className="text-white/60 text-sm mb-1">{t("modal.description")}</p>
                                             <p className="text-white/80 text-sm leading-relaxed">{certification.description}</p>
                                         </div>
                                     )}

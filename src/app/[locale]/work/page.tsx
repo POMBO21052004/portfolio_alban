@@ -14,19 +14,16 @@ import {
     TooltipTrigger,
 } from "@/components/ui/tooltip";
 
-import Link from "next/link";
+import { Link } from "@/i18n/routing";
 import Image from "next/image";
-import WorkSliderBtns from "@/components/WorkSliderBtns";
 import ProjectNavigation from "@/components/ProjectNavigation";
 import ImageLightbox from "@/components/ImageLightbox";
+import { useTranslations } from "next-intl";
 
-const projects = [
+const projectsData = [
     {
         num: "01",
-        category: "Frontend",
-        title: "Le Bricoleur",
-        description:
-            "Une plateforme de mise en relation mettant en relation les utilisateurs avec des techniciens qualifiés au Cameroun pour des services de réparation et rénovation. Le service garantit des interventions rapides et des professionnels de confiance.",
+        id: "01",
         stack: [{ name: "React" }, { name: "Tailwind CSS" }],
         image: "/assets/work/lebricoleur6.png",
         images: ["/assets/work/lebricoleur6.png", "/assets/work/lebricoleur5.png", "/assets/work/lebricoleur4.png", "/assets/work/lebricoleur7.png"],
@@ -35,10 +32,7 @@ const projects = [
     },
     {
         num: "02",
-        category: "Fullstack",
-        title: "Système de Présence",
-        description:
-            "Une solution ERP complète pour la gestion des ressources humaines, permettant un suivi précis des présences et des rapports automatisés pour optimiser la productivité interne.",
+        id: "02",
         stack: [{ name: "React" }, { name: "Laravel" }, { name: "MySQL" }, { name: "Bootstrap" }],
         image: "/assets/work/GTP1.png",
         images: ["/assets/work/GTP1.png", "/assets/work/GTP2.png", "/assets/work/GTP3.png", "/assets/work/GTP4.png", "/assets/work/GTP5.png"],
@@ -47,10 +41,7 @@ const projects = [
     },
     {
         num: "03",
-        category: "Fullstack",
-        title: "Solution web Edubullet",
-        description:
-            "La Plateforme de Gestion de Bulletins Scolaires est une solution SaaS complète pour la gestion complète qui automatise et modernise la gestion des bulletins de votre établissement. Elle permet de réduire de 70% le temps consacré à l'administration des notes tout en garantissant zéro erreur dans les calculs.",
+        id: "03",
         stack: [{ name: "React" }, { name: "Bootstrap" }, { name: "Laravel" }],
         image: "/assets/work/EduBullet1.png",
         images: ["/assets/work/EduBullet1.png", "/assets/work/EduBullet2.png", "/assets/work/EduBullet3.png"],
@@ -59,10 +50,7 @@ const projects = [
     },
     {
         num: "04",
-        category: "Mobile App",
-        title: "Stock Master",
-        description:
-            "Application mobile de gestion de stock complète et autonome avec interface Premium. Gestion centralisée des articles, traçabilité des mouvements, analyses statistiques avancées et support mode sombre/clair.",
+        id: "04",
         stack: [{ name: "Flutter" }, { name: "SQLite" }, { name: "Provider" }],
         image: "/assets/work/StockMaster1.jpg",
         images: ["/assets/work/StockMaster1.jpg", "/assets/work/StockMaster8.jpg", "/assets/work/StockMaster2.jpg", "/assets/work/StockMaster3.jpg", "/assets/work/StockMaster4.jpg", "/assets/work/StockMaster5.jpg", "/assets/work/StockMaster6.jpg"],
@@ -72,18 +60,25 @@ const projects = [
 ];
 
 const Work = () => {
-    const [project, setProject] = useState(projects[0]);
+    const t = useTranslations("Work");
+
+    const translatedProjects = projectsData.map((project) => ({
+        ...project,
+        title: t(`items.${project.id}.title`),
+        category: t(`items.${project.id}.category`),
+        description: t(`items.${project.id}.description`),
+    }));
+
+    const [project, setProject] = useState(translatedProjects[0]);
     const [activeIndex, setActiveIndex] = useState(0);
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
-    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
     const handleSlideChange = (swiper: any) => {
-        
         const currentIndex = swiper.activeIndex;
-        
-        setProject(projects[currentIndex]);
+        setProject(translatedProjects[currentIndex]);
         setActiveIndex(currentIndex);
-        setCurrentImageIndex(0); 
+        setCurrentImageIndex(0);
     }
 
     React.useEffect(() => {
@@ -147,7 +142,6 @@ const Work = () => {
                                     return (
                                         <li key={index} className="text-lg text-accent">
                                             {item.name}
-                                            {/* remove the last comma */}
                                             {index !== project.stack.length - 1 && ","}
                                         </li>
                                     );
@@ -166,7 +160,7 @@ const Work = () => {
                                                     <BsArrowUpRight className="text-white text-2xl group-hover:text-accent" />
                                                 </TooltipTrigger>
                                                 <TooltipContent>
-                                                    <p>Projet en direct</p>
+                                                    <p>{t("live")}</p>
                                                 </TooltipContent>
                                             </Tooltip>
                                         </TooltipProvider>
@@ -181,7 +175,7 @@ const Work = () => {
                                                     <BsGithub className="text-white text-2xl group-hover:text-accent" />
                                                 </TooltipTrigger>
                                                 <TooltipContent>
-                                                    <p>Repo Github</p>
+                                                    <p>{t("github")}</p>
                                                 </TooltipContent>
                                             </Tooltip>
                                         </TooltipProvider>
@@ -197,12 +191,10 @@ const Work = () => {
                             className="h-[520px] mb-12"
                             onSlideChange={handleSlideChange}
                         >
-                            {projects.map((project, index) => {
+                            {translatedProjects.map((project, index) => {
                                 return <SwiperSlide key={index} className="w-full">
                                     <div className="h-[460px] relative group flex justify-center items-center bg-zinc-900/50 border-2 border-transparent hover:border-accent/50 transition-all duration-500 rounded-xl overflow-hidden backdrop-blur-sm">
-                                        {/* overlay with zoom indicator */}
-                                        <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 cursor-pointer group/zoom" onClick={() => setIsModalOpen(true)}>
-                                            {/* Zoom icon - always visible */}
+                                        <div className="absolute top-0 bottom-0 w-full h-full bg-black/10 z-10 cursor-pointer group/zoom" onClick={() => setIsLightboxOpen(true)}>
                                             <div className="absolute inset-0 flex items-center justify-center transition-opacity duration-300">
                                                 <div className="w-16 h-16 rounded-full bg-accent/90 flex items-center justify-center backdrop-blur-sm shadow-lg">
                                                     <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -211,34 +203,29 @@ const Work = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        {/* image */}
                                         <div className="relative w-full h-full">
                                             <Image src={project.images[currentImageIndex]} fill className="object-contain p-5" alt={project.title} />
                                         </div>
-                                        {/* Image navigation arrows - only show if project has multiple images */}
                                         {project.images.length > 1 && (
                                             <>
-                                                {/* Left Arrow */}
                                                 <button
                                                     onClick={handlePrevImage}
                                                     className="absolute left-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-accent/20 hover:bg-accent/40 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group/arrow"
-                                                    aria-label="Image précédente"
+                                                    aria-label={t("prevImage")}
                                                 >
                                                     <svg className="w-6 h-6 text-white group-hover/arrow:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                                                     </svg>
                                                 </button>
-                                                {/* Right Arrow */}
                                                 <button
                                                     onClick={handleNextImage}
                                                     className="absolute right-4 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-accent/20 hover:bg-accent/40 backdrop-blur-sm flex items-center justify-center transition-all duration-300 group/arrow"
-                                                    aria-label="Image suivante"
+                                                    aria-label={t("nextImage")}
                                                 >
                                                     <svg className="w-6 h-6 text-white group-hover/arrow:text-accent transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                                                     </svg>
                                                 </button>
-                                                {/* Image indicator dots */}
                                                 <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2">
                                                     {project.images.map((_, imgIndex) => (
                                                         <button
@@ -248,7 +235,7 @@ const Work = () => {
                                                                 ? 'bg-accent w-8'
                                                                 : 'bg-white/40 hover:bg-white/60'
                                                                 }`}
-                                                            aria-label={`Aller à l'image ${imgIndex + 1}`}
+                                                            aria-label={`Image ${imgIndex + 1}`}
                                                         />
                                                     ))}
                                                 </div>
@@ -257,22 +244,20 @@ const Work = () => {
                                     </div>
                                 </SwiperSlide>
                             })}
-                            {/* Custom Project Navigation */}
                             <ProjectNavigation
                                 containerStyles="flex gap-2 absolute right-0 bottom-0 z-20 w-full justify-between items-center"
                                 iconStyles="text-[30px]"
                                 currentIndex={activeIndex}
-                                totalProjects={projects.length}
+                                totalProjects={translatedProjects.length}
                             />
                         </Swiper>
                     </div>
                 </div>
             </div>
 
-            {/* Lightbox Modal */}
             <ImageLightbox
-                isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
+                isOpen={isLightboxOpen}
+                onClose={() => setIsLightboxOpen(false)}
                 images={project.images}
                 currentIndex={currentImageIndex}
                 onPrevious={handlePrevImage}

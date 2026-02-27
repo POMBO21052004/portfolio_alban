@@ -1,11 +1,11 @@
 "use client";
 
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { Link, usePathname } from "@/i18n/routing";
+import { useTranslations } from "next-intl";
 
 const links = [
     {
-        name: "accueil",
+        name: "home",
         path: "/",
     },
     {
@@ -13,11 +13,11 @@ const links = [
         path: "/services",
     },
     {
-        name: "résumé",
+        name: "resume",
         path: "/resume",
     },
     {
-        name: "projets",
+        name: "work",
         path: "/work",
     },
     {
@@ -28,6 +28,8 @@ const links = [
 
 const Nav = () => {
     const pathname = usePathname();
+    const t = useTranslations("Nav");
+
     return (
         <nav className="flex gap-8">
             {links.map((link, index) => {
@@ -38,7 +40,7 @@ const Nav = () => {
                         className={`${link.path === pathname && "text-accent border-b-2 border-accent"
                             } capitalize font-medium hover:text-accent transition-all`}
                     >
-                        {link.name}
+                        {t(link.name)}
                     </Link>
                 );
             })}

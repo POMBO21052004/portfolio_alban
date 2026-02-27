@@ -10,8 +10,6 @@ import {
     FaNodeJs,
     FaGithub,
     FaGitAlt,
-    FaPython,
-    FaPhp,
     FaUser,
     FaPhone,
     FaBriefcase,
@@ -38,237 +36,109 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import CertificationModal from "@/components/CertificationModal";
-
-const about = {
-    icon: <FaUserCircle />,
-    title: "À propos de moi",
-    description:
-        "Développeur Full Stack passionné et rigoureux, je conçois des solutions digitales sur mesure alliant performance technique et esthétique soignée. Fort d'une double compétence en développement Front-end (React, Next.js) et Back-end (Django, Laravel), je m'engage à livrer un code propre, maintenable et évolutif. Toujours en veille technologique, je suis prêt à intégrer votre équipe pour relever des défis ambitieux.",
-    info: [
-        {
-            fieldName: "Nom",
-            fieldValue: "Pombo Mbe Alban",
-            icon: <FaUser />,
-        },
-        {
-            fieldName: "Téléphone",
-            fieldValue: "(+237) 681 20 25 20",
-            icon: <FaPhone />,
-        },
-        {
-            fieldName: "Expérience",
-            fieldValue: "3+ Ans",
-            icon: <FaBriefcase />,
-        },
-        {
-            fieldName: "Nationalité",
-            fieldValue: "Camerounais",
-            icon: <FaGlobe />,
-        },
-        {
-            fieldName: "Email",
-            fieldValue: "albanpombombe@gmail.com",
-            icon: <FaEnvelope />,
-        },
-        {
-            fieldName: "Freelance",
-            fieldValue: "Disponible",
-            icon: <FaUserTie />,
-        },
-        {
-            fieldName: "Ville",
-            fieldValue: "Douala, Cameroun",
-            icon: <FaMapMarkerAlt />,
-        },
-        {
-            fieldName: "Langues",
-            fieldValue: "Français",
-            icon: <FaLanguage />,
-        },
-    ],
-};
-
-const experience = {
-    icon: <FaBriefcase />,
-    title: "Mon expérience",
-    description:
-        "Un parcours riche en projets concrets et en collaborations techniques, démontrant ma capacité à m'adapter et à livrer de la valeur rapidement.",
-    items: [
-        {
-            company: "Digiplus Consulting Sarl",
-            position: "Stagiaire Développeur Web",
-            duration: "Nov 2025 - Jan 2026",
-            location: "https://maps.google.com/?q=Digiplus+Consulting+Douala",
-            details: "Réalisation du projet 'Le Bricoleur', plateforme de mise en relation client-technicien. Développement Fullstack (React/Laravel), intégration de la géolocalisation et du système de paiement."
-        },
-        {
-            company: "PANZANI CAMEROUN S.A",
-            position: "Stagiaire Analyste Info",
-            duration: "Jan 2025 - Mar 2025",
-            location: "https://maps.google.com/?q=PANZANI+CAMEROUN+Douala",
-            details: "Conception et déploiement de l'application 'GTP' (Gestion de Temps et Présence) pour optimiser le suivi RH. Automatisation des fiches de pointage et reporting des heures via Dashboard interactif."
-        },
-        {
-            company: "CCN Technologies",
-            position: "Stagiaire Full Stack",
-            duration: "Mar 2024 - Mai 2024",
-            location: "https://maps.google.com/?q=CCN+Technologies+Douala",
-            details: "Participation au développement d'un site e-commerce. Intégration de maquettes Figma pixel-perfect. Gestion de l'authentification et des paiements en ligne via Stripe."
-        },
-    ],
-};
-
-const education = {
-    icon: <FaGraduationCap />,
-    title: "Ma formation",
-    description:
-        "Une base académique solide renforcée par une pratique intensive, assurant une compréhension profonde des principes du génie logiciel.",
-    items: [
-        {
-            institution: "IUT Douala",
-            degree: "Licence Génie Logiciel",
-            duration: "2024 - 2025",
-            location: "https://maps.google.com/?q=IUT+Douala",
-            details: "Conception d'un SaaS de prise de rendez-vous pour les établissements de santé, intégrant Trello pour la communication lors de consultations à distance."
-        },
-        {
-            institution: "IUT Douala",
-            degree: "DUT en Génie Informatique",
-            duration: "2023 - 2024",
-            location: "https://maps.google.com/?q=IUT+Douala",
-            details: "Fondamentaux du développement web et mobile. Algorithmique avancée et structures de données. Administration systèmes et réseaux (Linux, Cisco)."
-        },
-        {
-            institution: "Institut Polyvalent Minfang",
-            degree: "Baccalauréat C",
-            duration: "2021 - 2022",
-            location: "https://maps.google.com/?q=Institut+Polyvalent+Minfang+Douala",
-            details: "Mention Bien. Excellence en Mathématiques et Informatiques."
-        },
-    ],
-};
-
-const skills = {
-    icon: <FaCode />,
-    title: "Mes compétences",
-    description:
-        "Maîtrise d'une stack technique complète allant du Front-end au Back-end. J'utilise des technologies modernes comme React et Next.js pour créer des interfaces dynamiques, couplées à des architectures robustes sous Django ou Laravel. Mon expertise inclut également la gestion de bases de données, la conteneurisation avec Docker et le design d'interfaces avec Figma.",
-    categories: [
-        {
-            title: "Front-End",
-            skillList: [
-                {
-                    icon: <FaHtml5 />,
-                    name: "html 5",
-                    level: "Avancé",
-                },
-                {
-                    icon: <FaCss3 />,
-                    name: "css 3",
-                    level: "Avancé",
-                },
-                {
-                    icon: <FaJs />,
-                    name: "javascript",
-                    level: "Intermédiaire",
-                },
-                {
-                    icon: <FaReact />,
-                    name: "react.js",
-                    level: "Avancé",
-                },
-                {
-                    icon: <SiNextdotjs />,
-                    name: "next.js",
-                    level: "Intermédiaire",
-                },
-                {
-                    icon: <SiTailwindcss />,
-                    name: "tailwind.css",
-                    level: "Avancé",
-                },
-            ]
-        },
-        {
-            title: "Back-End",
-            skillList: [
-                {
-                    icon: <FaNodeJs />,
-                    name: "node.js",
-                    level: "Intermédiaire",
-                },
-                {
-                    icon: <SiDjango />,
-                    name: "django",
-                    level: "Avancé",
-                },
-                {
-                    icon: <SiLaravel />,
-                    name: "laravel",
-                    level: "Intermédiaire",
-                },
-                {
-                    icon: <SiMysql />,
-                    name: "mysql",
-                    level: "Avancé",
-                },
-            ]
-        },
-        {
-            title: "Outils & DevOps",
-            skillList: [
-                {
-                    icon: <SiDocker />,
-                    name: "docker",
-                    level: "Basique",
-                },
-                {
-                    icon: <FaGitAlt />,
-                    name: "git",
-                    level: "Intermédiaire",
-                },
-                {
-                    icon: <FaGithub />,
-                    name: "github",
-                    level: "Intermédiaire",
-                },
-                {
-                    icon: <FaFigma />,
-                    name: "figma",
-                    level: "Intermédiaire",
-                },
-            ]
-        }
-    ],
-};
-
-const certifications = {
-    icon: <FaCertificate />,
-    title: "Mes certifications",
-    description:
-        "Certifications professionnelles validant mes compétences techniques et mon engagement dans l'apprentissage continu.",
-    items: [
-        {
-            name: "D-Clic",
-            issuer: "Certification Professionnelle",
-            date: "Novembre 2025",
-            image: "/assets/certifications/Attestation_dclic_1.png",
-            description: "Certification professionnelle D-Clic validant les compétences numériques et digitales."
-        },
-    ] as Array<{
-        name: string;
-        issuer: string;
-        date: string;
-        image: string;
-        description?: string;
-    }>,
-};
+import { useTranslations } from "next-intl";
 
 const Resume = () => {
-    const [selectedCertification, setSelectedCertification] = useState<typeof certifications.items[0] | null>(null);
+    const t = useTranslations("Resume");
+    const [selectedCertification, setSelectedCertification] = useState<any | null>(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const handleCertificationClick = (cert: typeof certifications.items[0]) => {
+    // Dynamic Data from Translations
+    const aboutData = {
+        icon: <FaUserCircle />,
+        title: t("about.title"),
+        description: t("about.description"),
+        info: [
+            { fieldName: t("about.fields.name"), fieldValue: "Pombo Mbe Alban", icon: <FaUser /> },
+            { fieldName: t("about.fields.phone"), fieldValue: "(+237) 681 20 25 20", icon: <FaPhone /> },
+            { fieldName: t("about.fields.experience"), fieldValue: t("about.values.experience"), icon: <FaBriefcase /> },
+            { fieldName: t("about.fields.nationality"), fieldValue: t("about.values.nationality"), icon: <FaGlobe /> },
+            { fieldName: t("about.fields.email"), fieldValue: "albanpombombe@gmail.com", icon: <FaEnvelope /> },
+            { fieldName: t("about.fields.freelance"), fieldValue: t("about.values.freelance"), icon: <FaUserTie /> },
+            { fieldName: t("about.fields.city"), fieldValue: t("about.values.city"), icon: <FaMapMarkerAlt /> },
+            { fieldName: t("about.fields.languages"), fieldValue: t("about.values.languages"), icon: <FaLanguage /> },
+        ],
+    };
+
+    const experienceData = {
+        icon: <FaBriefcase />,
+        title: t("experience.title"),
+        description: t("experience.description"),
+        items: t.raw("experience.items").map((item: any, index: number) => ({
+            ...item,
+            location: [
+                "https://maps.google.com/?q=Digiplus+Consulting+Douala",
+                "https://maps.google.com/?q=PANZANI+CAMEROUN+Douala",
+                "https://maps.google.com/?q=CCN+Technologies+Douala"
+            ][index]
+        })),
+    };
+
+    const educationData = {
+        icon: <FaGraduationCap />,
+        title: t("education.title"),
+        description: t("education.description"),
+        items: t.raw("education.items").map((item: any, index: number) => ({
+            ...item,
+            location: [
+                "https://maps.google.com/?q=IUT+Douala",
+                "https://maps.google.com/?q=IUT+Douala",
+                "https://maps.google.com/?q=Institut+Polyvalent+Minfang+Douala"
+            ][index]
+        })),
+    };
+
+    const skillsData = {
+        icon: <FaCode />,
+        title: t("skills.title"),
+        description: t("skills.description"),
+        categories: [
+            {
+                title: t("skills.categories.frontend"),
+                skillList: [
+                    { icon: <FaHtml5 />, name: "html 5", level: t("skills.level.advanced") },
+                    { icon: <FaCss3 />, name: "css 3", level: t("skills.level.advanced") },
+                    { icon: <FaJs />, name: "javascript", level: t("skills.level.intermediate") },
+                    { icon: <FaReact />, name: "react.js", level: t("skills.level.advanced") },
+                    { icon: <SiNextdotjs />, name: "next.js", level: t("skills.level.intermediate") },
+                    { icon: <SiTailwindcss />, name: "tailwind.css", level: t("skills.level.advanced") },
+                ]
+            },
+            {
+                title: t("skills.categories.backend"),
+                skillList: [
+                    { icon: <FaNodeJs />, name: "node.js", level: t("skills.level.intermediate") },
+                    { icon: <SiDjango />, name: "django", level: t("skills.level.advanced") },
+                    { icon: <SiLaravel />, name: "laravel", level: t("skills.level.intermediate") },
+                    { icon: <SiMysql />, name: "mysql", level: t("skills.level.advanced") },
+                ]
+            },
+            {
+                title: t("skills.categories.tools"),
+                skillList: [
+                    { icon: <SiDocker />, name: "docker", level: t("skills.level.beginner") },
+                    { icon: <FaGitAlt />, name: "git", level: t("skills.level.intermediate") },
+                    { icon: <FaGithub />, name: "github", level: t("skills.level.intermediate") },
+                    { icon: <FaFigma />, name: "figma", level: t("skills.level.intermediate") },
+                ]
+            }
+        ],
+    };
+
+    const certificationsData = {
+        icon: <FaCertificate />,
+        title: t("certifications.title"),
+        description: t("certifications.description"),
+        items: t.raw("certifications.items").map((item: any, index: number) => ({
+            ...item,
+            image: [
+                "/assets/certifications/Attestation_dclic_1.png",
+                "/assets/certifications/Attestation_de_formation_niveau_intermédiaire.png"
+            ][index]
+        })),
+    };
+
+    const handleCertificationClick = (cert: any) => {
         setSelectedCertification(cert);
         setIsModalOpen(true);
     };
@@ -293,11 +163,11 @@ const Resume = () => {
                     className="flex flex-col xl:flex-row gap-[60px]"
                 >
                     <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-                        <TabsTrigger value="experience">Expérience</TabsTrigger>
-                        <TabsTrigger value="education">Formation</TabsTrigger>
-                        <TabsTrigger value="skills">Compétences</TabsTrigger>
-                        <TabsTrigger value="certifications">Certifications</TabsTrigger>
-                        <TabsTrigger value="about">À propos</TabsTrigger>
+                        <TabsTrigger value="experience">{t("tabs.experience")}</TabsTrigger>
+                        <TabsTrigger value="education">{t("tabs.education")}</TabsTrigger>
+                        <TabsTrigger value="skills">{t("tabs.skills")}</TabsTrigger>
+                        <TabsTrigger value="certifications">{t("tabs.certifications")}</TabsTrigger>
+                        <TabsTrigger value="about">{t("tabs.about")}</TabsTrigger>
                     </TabsList>
 
                     {/* content */}
@@ -306,15 +176,15 @@ const Resume = () => {
                         <TabsContent value="experience" className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <div className="flex items-center gap-4 justify-center xl:justify-start">
-                                    <div className="text-4xl text-accent">{experience.icon}</div>
-                                    <h3 className="text-4xl font-bold">{experience.title}</h3>
+                                    <div className="text-4xl text-accent">{experienceData.icon}</div>
+                                    <h3 className="text-4xl font-bold">{experienceData.title}</h3>
                                 </div>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                                    {experience.description}
+                                    {experienceData.description}
                                 </p>
                                 <ScrollArea className="h-[400px]">
                                     <ul className="grid grid-cols-1 gap-[30px]">
-                                        {experience.items.map((item, index) => {
+                                        {experienceData.items.map((item: any, index: number) => {
                                             return (
                                                 <li
                                                     key={index}
@@ -325,7 +195,6 @@ const Resume = () => {
                                                         {item.position}
                                                     </h3>
                                                     <div className="flex items-center gap-3 mb-1">
-                                                        {/* dot */}
                                                         <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                                                         <p className="text-white/60 font-medium">{item.company}</p>
                                                         {item.location && (
@@ -355,15 +224,15 @@ const Resume = () => {
                         <TabsContent value="education" className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <div className="flex items-center gap-4 justify-center xl:justify-start">
-                                    <div className="text-4xl text-accent">{education.icon}</div>
-                                    <h3 className="text-4xl font-bold">{education.title}</h3>
+                                    <div className="text-4xl text-accent">{educationData.icon}</div>
+                                    <h3 className="text-4xl font-bold">{educationData.title}</h3>
                                 </div>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                                    {education.description}
+                                    {educationData.description}
                                 </p>
                                 <ScrollArea className="h-[400px]">
                                     <ul className="grid grid-cols-1 gap-[30px]">
-                                        {education.items.map((item, index) => {
+                                        {educationData.items.map((item: any, index: number) => {
                                             return (
                                                 <li
                                                     key={index}
@@ -374,7 +243,6 @@ const Resume = () => {
                                                         {item.degree}
                                                     </h3>
                                                     <div className="flex items-center gap-3 mb-1">
-                                                        {/* dot */}
                                                         <span className="w-[6px] h-[6px] rounded-full bg-accent"></span>
                                                         <p className="text-white/60 font-medium">{item.institution}</p>
                                                         {item.location && (
@@ -404,15 +272,15 @@ const Resume = () => {
                         <TabsContent value="skills" className="w-full h-full">
                             <div className="flex flex-col gap-[30px]">
                                 <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                                    <h3 className="text-4xl font-bold">{skills.title}</h3>
+                                    <h3 className="text-4xl font-bold">{skillsData.title}</h3>
                                     <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                                        {skills.description}
+                                        {skillsData.description}
                                     </p>
                                 </div>
 
                                 <ScrollArea className="h-[400px]">
                                     <div className="flex flex-col gap-10">
-                                        {skills.categories.map((category, catIndex) => (
+                                        {skillsData.categories.map((category, catIndex) => (
                                             <div key={catIndex} className="flex flex-col gap-4">
                                                 <h4 className="text-2xl font-bold text-accent text-center xl:text-left">{category.title}</h4>
                                                 <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 xl:gap-[30px]">
@@ -450,23 +318,22 @@ const Resume = () => {
                         <TabsContent value="certifications" className="w-full">
                             <div className="flex flex-col gap-[30px] text-center xl:text-left">
                                 <div className="flex items-center gap-4 justify-center xl:justify-start">
-                                    <div className="text-4xl text-accent">{certifications.icon}</div>
-                                    <h3 className="text-4xl font-bold">{certifications.title}</h3>
+                                    <div className="text-4xl text-accent">{certificationsData.icon}</div>
+                                    <h3 className="text-4xl font-bold">{certificationsData.title}</h3>
                                 </div>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                                    {certifications.description}
+                                    {certificationsData.description}
                                 </p>
                                 <ScrollArea className="h-[400px]">
-                                    {certifications.items.length > 0 ? (
+                                    {certificationsData.items.length > 0 ? (
                                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
-                                            {certifications.items.map((item, index) => {
+                                            {certificationsData.items.map((item: any, index: number) => {
                                                 return (
                                                     <li
                                                         key={index}
                                                         onClick={() => handleCertificationClick(item)}
                                                         className="bg-[#232329] rounded-xl overflow-hidden cursor-pointer group hover:border-accent border border-transparent transition-all duration-300"
                                                     >
-                                                        {/* Image */}
                                                         <div className="relative w-full aspect-[2/1] bg-white overflow-hidden">
                                                             <Image
                                                                 src={item.image}
@@ -476,11 +343,10 @@ const Resume = () => {
                                                             />
                                                             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-all duration-300 flex items-center justify-center">
                                                                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-accent/90 text-primary px-4 py-2 rounded-full text-sm font-semibold">
-                                                                    Voir les détails
+                                                                    {t("certifications.viewDetails")}
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        {/* Info */}
                                                         <div className="p-4">
                                                             <h4 className="text-lg font-bold text-white mb-2 group-hover:text-accent transition-colors">
                                                                 {item.name}
@@ -501,10 +367,10 @@ const Resume = () => {
                                                 <FaCertificate />
                                             </div>
                                             <p className="text-white/60 text-lg">
-                                                Aucune certification pour le moment.
+                                                {t("certifications.noCertifications")}
                                             </p>
                                             <p className="text-white/40 text-sm mt-2">
-                                                De nouvelles certifications seront ajoutées prochainement.
+                                                {t("certifications.upcomingCerts")}
                                             </p>
                                         </div>
                                     )}
@@ -516,14 +382,14 @@ const Resume = () => {
                         <TabsContent value="about" className="w-full text-center xl:text-left">
                             <div className="flex flex-col gap-[30px]">
                                 <div className="flex items-center gap-4 justify-center xl:justify-start">
-                                    <div className="text-4xl text-accent">{about.icon}</div>
-                                    <h3 className="text-4xl font-bold">{about.title}</h3>
+                                    <div className="text-4xl text-accent">{aboutData.icon}</div>
+                                    <h3 className="text-4xl font-bold">{aboutData.title}</h3>
                                 </div>
                                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                                    {about.description}
+                                    {aboutData.description}
                                 </p>
                                 <ul className="grid grid-cols-1 xl:grid-cols-2 gap-[30px] mx-auto xl:mx-0">
-                                    {about.info.map((item, index) => {
+                                    {aboutData.info.map((item, index) => {
                                         return (
                                             <li
                                                 key={index}

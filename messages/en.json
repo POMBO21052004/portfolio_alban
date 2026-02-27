@@ -1,0 +1,394 @@
+{
+    "Metadata": {
+        "title": "Pombo Mbe Alban | Full Stack Developer",
+        "description": "22-year-old Full-Stack Web Developer, passionate about creating modern and intuitive applications."
+    },
+    "HomePage": {
+        "greeting": "Hello",
+        "greetingEvening": "Good evening",
+        "role": "Full Stack Developer",
+        "title": "I am",
+        "description": "22-year-old Full-Stack Web Developer, passionate about creating modern and intuitive applications, I transform complex ideas into elegant code. Curious and creative, I have acquired solid skills in front-end and back-end development, allowing me to design complete and efficient solutions.",
+        "downloadCV": "Download CV"
+    },
+    "Nav": {
+        "home": "home",
+        "services": "services",
+        "resume": "resume",
+        "work": "projects",
+        "contact": "contact"
+    },
+    "Header": {
+        "hireMe": "Hire me"
+    },
+    "Services": {
+        "title": "Custom Digital",
+        "titleAccent": "Solutions",
+        "description": "Advanced technological services to turn your ideas into digital solutions.",
+        "ctaTitle": "Have a specific project in mind? Let's talk about it!",
+        "ctaButton": "Let's discuss your project",
+        "learnMore": "Learn more",
+        "modal": {
+            "whatIsIt": "What is it exactly?",
+            "howItWorks": "How does it work?",
+            "benefits": "The benefits for you",
+            "examples": "Concrete examples"
+        },
+        "items": {
+            "01": {
+                "title": "Front-End Development",
+                "description": "Creating modern, responsive, and intuitive user interfaces with React and Next.js.",
+                "detailedExplanation": {
+                    "whatIsIt": "Front-End development is everything you see and interact with on a website or application: buttons, menus, forms, animations... It's the visible part of the iceberg! Imagine it like the decoration and layout of a house: it's what makes the space pleasant, functional, and easy to use.",
+                    "howItWorks": [
+                        "I start by understanding your needs and those of your users",
+                        "I create visual mockups (design) to show you what your site will look like",
+                        "I transform these mockups into functional code with React and Next.js (modern and high-performance technologies)",
+                        "I make sure everything works perfectly on all devices (computer, tablet, smartphone)",
+                        "I test and optimize so that your site is fast and smooth"
+                    ],
+                    "benefits": [
+                        "A modern and professional interface that inspires confidence",
+                        "Intuitive navigation: your visitors easily find what they are looking for",
+                        "A site that adapts to all screens (responsive design)",
+                        "Fast loading times so as not to lose your visitors",
+                        "A unique design that reflects your brand identity"
+                    ],
+                    "examples": [
+                        "A showcase site for your business with elegant design and smooth animations",
+                        "An online store with an intuitive shopping cart and simplified checkout process",
+                        "A dashboard for managing your data with interactive charts",
+                        "A web application for booking services in a few clicks"
+                    ]
+                }
+            },
+            "02": {
+                "title": "Back-End Development",
+                "description": "Designing robust architectures, secure APIs, and high-performance data management with Laravel and Django Rest Framework.",
+                "detailedExplanation": {
+                    "whatIsIt": "Back-End development is the invisible but essential part of a site or application. It's the engine that runs the entire system: data management, information processing, security, connection with other services... If the Front-End is the decoration of the house, the Back-End is the plumbing, electricity, and foundations!",
+                    "howItWorks": [
+                        "I analyze your data and functional needs",
+                        "I design a solid and scalable architecture for your system",
+                        "I create an organized database to store your information securely",
+                        "I develop APIs (connection points) so your site can communicate with other services",
+                        "I implement security systems to protect your data and that of your users"
+                    ],
+                    "benefits": [
+                        "A reliable system that works 24/7 without interruption",
+                        "Your data is secure and protected against attacks",
+                        "A scalable architecture: easy to add new features later",
+                        "Optimal performance even with many simultaneous users",
+                        "Automated management of your business processes"
+                    ],
+                    "examples": [
+                        "A customer management system with order history and automatic billing",
+                        "An API to connect your website to your mobile application",
+                        "A secure authentication system with role and permission management",
+                        "A booking platform with real-time availability management"
+                    ]
+                }
+            },
+            "03": {
+                "title": "Technical Analysis",
+                "description": "In-depth audit of your systems and technological strategy to optimize your performance.",
+                "detailedExplanation": {
+                    "whatIsIt": "Technical analysis is like a check-up for your website or application. I review all technical aspects to identify what's working well, what could be improved, and potential problems. It's a complete diagnostic that helps you make the right decisions for your digital project.",
+                    "howItWorks": [
+                        "I examine your existing site or application in detail",
+                        "I test performance: loading speed, response time, resource consumption",
+                        "I analyze security to detect potential vulnerabilities",
+                        "I check code quality and system architecture",
+                        "I provide a detailed report with concrete and prioritized recommendations"
+                    ],
+                    "benefits": [
+                        "You know exactly where your project stands and what needs to be improved",
+                        "You avoid costly problems before they occur",
+                        "You optimize costs by identifying resource waste",
+                        "You make informed decisions based on concrete data",
+                        "You improve user experience through optimizations"
+                    ],
+                    "examples": [
+                        "Performance audit of a slow-loading e-commerce site",
+                        "Security analysis before launching a new application",
+                        "Technical evaluation of an existing project before moving forward",
+                        "Diagnostic of recurring issues on a web platform"
+                    ]
+                }
+            },
+            "04": {
+                "title": "Android Development",
+                "description": "Execution of high-performance and ergonomic native and cross-platform mobile applications using Flutter.",
+                "detailedExplanation": {
+                    "whatIsIt": "Android development is the creation of mobile applications for smartphones and tablets. With Flutter, I can create a single application that works on both Android AND iOS, saving you time and money. It's like having your business in your customers' pockets!",
+                    "howItWorks": [
+                        "I define the features of your mobile application with you",
+                        "I create a design adapted to small screens and touch use",
+                        "I develop the application with Flutter so it works on Android and iOS",
+                        "I integrate native phone features (camera, GPS, notifications...)",
+                        "I test on different devices and publish to stores (Google Play, App Store)"
+                    ],
+                    "benefits": [
+                        "Your customers always have you at their fingertips",
+                        "One application for both Android AND iOS = significant savings",
+                        "Access to native phone features (GPS, camera, push notifications...)",
+                        "Offline capability",
+                        "Presence on official stores strengthens your credibility"
+                    ],
+                    "examples": [
+                        "A delivery application with real-time GPS tracking",
+                        "A loyalty app with QR code scanning and promotion notifications",
+                        "A service booking application with integrated payment",
+                        "A management tool for your field teams with data synchronization"
+                    ]
+                }
+            },
+            "05": {
+                "title": "AI Optimization",
+                "description": "Integration of artificial intelligence to automate your processes and analyze your data.",
+                "detailedExplanation": {
+                    "whatIsIt": "AI optimization is using artificial intelligence to make your business more efficient. AI can automate repetitive tasks, analyze large amounts of data, make predictions, or even talk to your customers. It's like having a super intelligent assistant who works 24/7 without getting tired!",
+                    "howItWorks": [
+                        "I identify repetitive or time-consuming tasks in your activity",
+                        "I choose the most suitable AI technologies for your needs",
+                        "I integrate AI solutions into your existing systems",
+                        "I train the AI with your data so it understands your context",
+                        "I set up dashboards to track results"
+                    ],
+                    "benefits": [
+                        "Considerable time savings on repetitive tasks",
+                        "Reduction of human errors",
+                        "24/7 availability for your customers (chatbots)",
+                        "Analysis and predictions based on your data",
+                        "You focus on high-value tasks"
+                    ],
+                    "examples": [
+                        "An intelligent chatbot to answer frequently asked questions from your customers",
+                        "A product recommendation system based on user preferences",
+                        "Automatic analysis of documents to extract important information",
+                        "A sales prediction tool to better manage your stocks"
+                    ]
+                }
+            },
+            "06": {
+                "title": "UI/UX Design & Prototyping",
+                "description": "Design of intuitive and aesthetic user-centric interfaces.",
+                "detailedExplanation": {
+                    "whatIsIt": "UI (User Interface) and UX (User Experience) design aims to make your application not only beautiful, but above all easy and pleasant for your customers to use.",
+                    "howItWorks": [
+                        "User research and personas",
+                        "Wireframe creation",
+                        "High-fidelity design on Figma",
+                        "Interactive prototyping",
+                        "User testing"
+                    ],
+                    "benefits": [
+                        "Reduced bounce rate",
+                        "Increased user engagement",
+                        "Strong and professional visual identity",
+                        "Concept validation before coding"
+                    ],
+                    "examples": [
+                        "Mobile app mockups",
+                        "Graphical redesign of existing sites",
+                        "Design Systems"
+                    ]
+                }
+            }
+        }
+    },
+    "Resume": {
+        "tabs": {
+            "experience": "Experience",
+            "education": "Education",
+            "skills": "Skills",
+            "certifications": "Certifications",
+            "about": "About"
+        },
+        "about": {
+            "title": "About me",
+            "description": "Passionate and rigorous Full Stack Developer, I design tailor-made digital solutions combining technical performance and polished aesthetics. With double expertise in Front-end development (React, Next.js) and Back-end development (Django, Laravel), I am committed to delivering clean, maintainable, and scalable code. Always on tech watch, I am ready to join your team to take on ambitious challenges.",
+            "fields": {
+                "name": "Name",
+                "phone": "Phone",
+                "experience": "Experience",
+                "nationality": "Nationality",
+                "email": "Email",
+                "freelance": "Freelance",
+                "city": "City",
+                "languages": "Languages"
+            },
+            "values": {
+                "experience": "3+ Years",
+                "nationality": "Cameroonian",
+                "freelance": "Available",
+                "city": "Douala, Cameroon",
+                "languages": "French & English"
+            }
+        },
+        "experience": {
+            "title": "My experience",
+            "description": "A journey rich in concrete projects and technical collaborations, demonstrating my ability to adapt and deliver value quickly.",
+            "items": [
+                {
+                    "company": "Digiplus Consulting Sarl",
+                    "position": "Web Developer Intern",
+                    "duration": "Nov 2025 - Jan 2026",
+                    "details": "Development of 'Le Bricoleur' project, a client-technician matching platform. Fullstack development (React/Laravel), integration of geolocation and payment system."
+                },
+                {
+                    "company": "PANZANI CAMEROUN S.A",
+                    "position": "IT Analyst Intern",
+                    "duration": "Jan 2025 - Mar 2025",
+                    "details": "Design and deployment of 'GTP' (Time and Attendance Management) application to optimize HR tracking. Automation of time sheets and reporting via interactive Dashboard."
+                },
+                {
+                    "company": "CCN Technologies",
+                    "position": "Full Stack Intern",
+                    "duration": "Mar 2024 - Mai 2024",
+                    "details": "Participation in the development of an e-commerce site. Integration of pixel-perfect Figma mockups. Authentication and online payment management via Stripe."
+                }
+            ]
+        },
+        "education": {
+            "title": "My education",
+            "description": "A solid academic foundation reinforced by intensive practice, ensuring a deep understanding of software engineering principles.",
+            "items": [
+                {
+                    "institution": "IUT Douala",
+                    "degree": "License in Software Engineering",
+                    "duration": "2024 - 2025",
+                    "details": "Design of a booking SaaS for health facilities, integrating Trello for communication during remote consultations."
+                },
+                {
+                    "institution": "IUT Douala",
+                    "degree": "DUT in Computer Science",
+                    "duration": "2023 - 2024",
+                    "details": "Fundamentals of web and mobile development. Advanced algorithms and data structures. Systems and network administration (Linux, Cisco)."
+                },
+                {
+                    "institution": "Institut Polyvalent Minfang",
+                    "degree": "Baccalauréat C",
+                    "duration": "2021 - 2022",
+                    "details": "Honors: Good. Excellence in Mathematics and Computer Science."
+                }
+            ]
+        },
+        "skills": {
+            "title": "My skills",
+            "description": "Mastery of a complete technical stack ranging from Front-end to Back-end. I use modern technologies like React and Next.js to create dynamic interfaces, couplée à des architectures robustes sous Django or Laravel. My expertise also includes database management, containerization with Docker, and interface design with Figma.",
+            "level": {
+                "beginner": "Basic",
+                "intermediate": "Intermediate",
+                "advanced": "Advanced"
+            },
+            "categories": {
+                "frontend": "Front-End",
+                "backend": "Back-End",
+                "tools": "Tools & DevOps"
+            }
+        },
+        "certifications": {
+            "title": "My certifications",
+            "description": "Professional certifications validating my technical skills and my commitment to continuous learning.",
+            "viewDetails": "View details",
+            "noCertifications": "No certifications for now.",
+            "upcomingCerts": "New certifications will be added soon.",
+            "modal": {
+                "issuer": "Issuer",
+                "date": "Date",
+                "description": "Description"
+            },
+            "items": [
+                {
+                    "name": "Web Developer - Beginner Level",
+                    "issuer": "OIF",
+                    "date": "November 2025",
+                    "description": "Intensive certification on digital professions, validating advanced skills in web development, interface design, and digital project management."
+                },
+                {
+                    "name": "Web Developer - Intermediate Level",
+                    "issuer": "OIF",
+                    "date": "January 2025",
+                    "description": "Validation of skills in software architecture, robust application development, and integration of complex digital solutions."
+                }
+            ]
+        }
+    },
+    "Work": {
+        "live": "Live project",
+        "github": "Github Repo",
+        "prevProject": "Previous project",
+        "nextProject": "Next project",
+        "prevImage": "Previous image",
+        "nextImage": "Next image",
+        "close": "Close",
+        "items": {
+            "01": {
+                "title": "Le Bricoleur",
+                "category": "Frontend",
+                "description": "A matching platform connecting users with qualified technicians in Cameroon for repair and renovation services. The service guarantees fast intervention and trusted professionals."
+            },
+            "02": {
+                "title": "Attendance System",
+                "category": "Fullstack",
+                "description": "A comprehensive ERP solution for human resource management, allowing precise attendance tracking and automated reporting to optimize internal productivity."
+            },
+            "03": {
+                "title": "Edubullet Web Solution",
+                "category": "Fullstack",
+                "description": "The School Report Management Platform is a complete SaaS solution that automates and modernizes the management of school reports for your institution. It reduces the time spent on grade administration by 70% while guaranteeing zero calculation errors."
+            },
+            "04": {
+                "title": "Stock Master",
+                "category": "Mobile App",
+                "description": "Comprehensive and autonomous mobile stock management application with a Premium interface. Centralized article management, movement traceability, advanced statistical analysis, and dark/light mode support."
+            }
+        }
+    },
+    "Contact": {
+        "title": "Let's work together",
+        "description": "Interested in a collaboration or have a question? Fill out the form below and I'll get back to you as soon as possible.",
+        "form": {
+            "firstname": "First name",
+            "lastname": "Last name",
+            "email": "Email address",
+            "phone": "Phone number",
+            "service": "Select a service",
+            "message": "Type your message here.",
+            "file": "Attachment (Optional, Max 2MB)",
+            "send": "Send",
+            "sending": "Sending...",
+            "success": "Your message was sent successfully!",
+            "error": "An error occurred. Please try again.",
+            "fileTooLarge": "File is too large (Max 2MB)"
+        },
+        "info": {
+            "phone": "Phone",
+            "email": "Email",
+            "address": "Address",
+            "addressValue": "Douala Cameroon, PK 14, Mount Sinai"
+        },
+        "services": {
+            "frontend": "Front-End Development",
+            "backend": "Back-End Development",
+            "fullstack": "Full Stack Development",
+            "mobile": "Mobile Development (Android/IOS)",
+            "design": "UI/UX Design",
+            "analysis": "Technical Analysis & Audit",
+            "ai": "AI Optimization",
+            "other": "Other"
+        },
+        "popup": {
+            "title": "How does it work?",
+            "step1": "Fill out the form with your request.",
+            "step2": "A confirmation email will be sent to you instantly."
+        }
+    },
+    "Stats": {
+        "experience": "Years of experience",
+        "projects": "Projects completed",
+        "technos": "Technologies mastered",
+        "commits": "GitHub commits"
+    }
+}

@@ -19,29 +19,32 @@ import {
 
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 import { motion } from "framer-motion";
-
-const info = [
-    {
-        icon: <FaPhoneAlt />,
-        title: "Téléphone",
-        description: "(+237) 681 20 25 20",
-        href: "tel:+237681202520",
-    },
-    {
-        icon: <FaEnvelope />,
-        title: "Email",
-        description: "albanpombombe@gmail.com",
-        href: "mailto:albanpombombe@gmail.com",
-    },
-    {
-        icon: <FaMapMarkerAlt />,
-        title: "Adresse",
-        description: "Douala Cameroun, PK 14, Mont Sinai",
-        href: null,
-    },
-];
+import { useTranslations } from "next-intl";
 
 const Contact = () => {
+    const t = useTranslations("Contact");
+
+    const info = [
+        {
+            icon: <FaPhoneAlt />,
+            title: t("info.phone"),
+            description: "(+237) 681 20 25 20",
+            href: "tel:+237681202520",
+        },
+        {
+            icon: <FaEnvelope />,
+            title: t("info.email"),
+            description: "albanpombombe@gmail.com",
+            href: "mailto:albanpombombe@gmail.com",
+        },
+        {
+            icon: <FaMapMarkerAlt />,
+            title: t("info.address"),
+            description: t("info.addressValue"),
+            href: null,
+        },
+    ];
+
     const [formData, setFormData] = useState({
         firstname: "",
         lastname: "",
@@ -62,7 +65,7 @@ const Contact = () => {
         if (e.target.files && e.target.files[0]) {
             const selectedFile = e.target.files[0];
             if (selectedFile.size > 2 * 1024 * 1024) { // 2MB limit
-                alert("Le fichier est trop volumineux (Max 2Mo)");
+                alert(t("form.fileTooLarge"));
                 e.target.value = ""; // Reset input
                 setFile(null);
             } else {
@@ -93,7 +96,7 @@ const Contact = () => {
         try {
             const response = await fetch("/api/contact", {
                 method: "POST",
-                body: data, // Send FormData specifically
+                body: data,
             });
 
             if (response.ok) {
@@ -107,7 +110,6 @@ const Contact = () => {
                     message: "",
                 });
                 setFile(null);
-                // Reset file input visually if needed, though state null handles logic
                 const fileInput = document.querySelector('input[type="file"]') as HTMLInputElement;
                 if (fileInput) fileInput.value = "";
             } else {
@@ -133,40 +135,40 @@ const Contact = () => {
                     {/* form */}
                     <div className="xl:h-[54%] order-2 xl:order-none">
                         <form onSubmit={handleSubmit} className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-                            <h3 className="text-4xl text-accent">Travaillons ensemble</h3>
+                            <h3 className="text-4xl text-accent">{t("title")}</h3>
                             <p className="text-white/60">
-                                Intéressé par une collaboration ou vous avez une question ? Remplissez le formulaire ci-dessous et je vous répondrai dans les plus brefs délais.
+                                {t("description")}
                             </p>
                             {/* input */}
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                                <Input type="text" name="firstname" placeholder="Prénom" value={formData.firstname} onChange={handleChange} required />
-                                <Input type="text" name="lastname" placeholder="Nom" value={formData.lastname} onChange={handleChange} required />
-                                <Input type="email" name="email" placeholder="Adresse Email" value={formData.email} onChange={handleChange} required />
-                                <Input type="tel" name="phone" placeholder="Numéro de téléphone" value={formData.phone} onChange={handleChange} />
+                                <Input type="text" name="firstname" placeholder={t("form.firstname")} value={formData.firstname} onChange={handleChange} required />
+                                <Input type="text" name="lastname" placeholder={t("form.lastname")} value={formData.lastname} onChange={handleChange} required />
+                                <Input type="email" name="email" placeholder={t("form.email")} value={formData.email} onChange={handleChange} required />
+                                <Input type="tel" name="phone" placeholder={t("form.phone")} value={formData.phone} onChange={handleChange} />
                             </div>
                             {/* select */}
                             <Select onValueChange={handleSelectChange}>
                                 <SelectTrigger className="w-full">
-                                    <SelectValue placeholder="Sélectionnez un service" />
+                                    <SelectValue placeholder={t("form.service")} />
                                 </SelectTrigger>
                                 <SelectContent>
                                     <SelectGroup>
-                                        <SelectLabel>Sélectionnez un service</SelectLabel>
-                                        <SelectItem value="Développement Front-End">Développement Front-End</SelectItem>
-                                        <SelectItem value="Développement Back-End">Développement Back-End</SelectItem>
-                                        <SelectItem value="Développement Full Stack">Développement Full Stack</SelectItem>
-                                        <SelectItem value="Développement Mobile (Android/IOS)">Développement Mobile (Android/IOS)</SelectItem>
-                                        <SelectItem value="Design UI/UX">Design UI/UX</SelectItem>
-                                        <SelectItem value="Analyse Technique & Audit">Analyse Technique & Audit</SelectItem>
-                                        <SelectItem value="Optimisation IA">Optimisation IA</SelectItem>
-                                        <SelectItem value="Autre">Autre</SelectItem>
+                                        <SelectLabel>{t("form.service")}</SelectLabel>
+                                        <SelectItem value="Développement Front-End">{t("services.frontend")}</SelectItem>
+                                        <SelectItem value="Développement Back-End">{t("services.backend")}</SelectItem>
+                                        <SelectItem value="Développement Full Stack">{t("services.fullstack")}</SelectItem>
+                                        <SelectItem value="Développement Mobile (Android/IOS)">{t("services.mobile")}</SelectItem>
+                                        <SelectItem value="Design UI/UX">{t("services.design")}</SelectItem>
+                                        <SelectItem value="Analyse Technique & Audit">{t("services.analysis")}</SelectItem>
+                                        <SelectItem value="Optimisation IA">{t("services.ai")}</SelectItem>
+                                        <SelectItem value="Autre">{t("services.other")}</SelectItem>
                                     </SelectGroup>
                                 </SelectContent>
                             </Select>
                             {/* textarea */}
                             <Textarea
                                 className="h-[200px]"
-                                placeholder="Tapez votre message ici."
+                                placeholder={t("form.message")}
                                 name="message"
                                 value={formData.message}
                                 onChange={handleChange}
@@ -174,7 +176,7 @@ const Contact = () => {
                             />
                             {/* file upload - optional */}
                             <div className="flex flex-col gap-2">
-                                <label htmlFor="file" className="text-white/60 text-sm ml-1">Pièce jointe (Optionnel, Max 2Mo)</label>
+                                <label htmlFor="file" className="text-white/60 text-sm ml-1">{t("form.file")}</label>
                                 <Input
                                     id="file"
                                     type="file"
@@ -185,13 +187,13 @@ const Contact = () => {
                             </div>
                             {/* btn */}
                             <Button size="md" className="max-w-40" disabled={status === "loading"}>
-                                {status === "loading" ? "Envoi..." : "Envoyer"}
+                                {status === "loading" ? t("form.sending") : t("form.send")}
                             </Button>
                             {status === "success" && (
-                                <p className="text-accent mt-2">Votre message a été envoyé avec succès !</p>
+                                <p className="text-accent mt-2">{t("form.success")}</p>
                             )}
                             {status === "error" && (
-                                <p className="text-red-500 mt-2">Une erreur s'est produite. Veuillez réessayer.</p>
+                                <p className="text-red-500 mt-2">{t("form.error")}</p>
                             )}
                         </form>
                     </div>

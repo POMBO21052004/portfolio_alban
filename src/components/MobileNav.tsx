@@ -1,15 +1,15 @@
 "use client";
 
-import { usePathname } from "next/navigation";
-import Link from "next/link";
+import { usePathname, Link } from "@/i18n/routing";
 import { CiMenuFries } from "react-icons/ci";
 import { IoMdClose } from "react-icons/io";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const links = [
     {
-        name: "accueil",
+        name: "home",
         path: "/",
     },
     {
@@ -17,11 +17,11 @@ const links = [
         path: "/services",
     },
     {
-        name: "résumé",
+        name: "resume",
         path: "/resume",
     },
     {
-        name: "projets",
+        name: "work",
         path: "/work",
     },
     {
@@ -33,6 +33,7 @@ const links = [
 const MobileNav = () => {
     const pathname = usePathname();
     const [isOpen, setIsOpen] = useState(false);
+    const t = useTranslations("Nav");
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
@@ -94,7 +95,7 @@ const MobileNav = () => {
                                                 className={`${link.path === pathname && "text-accent border-b-2 border-accent"
                                                     } text-xl capitalize hover:text-accent transition-all`}
                                             >
-                                                {link.name}
+                                                {t(link.name)}
                                             </Link>
                                         );
                                     })}

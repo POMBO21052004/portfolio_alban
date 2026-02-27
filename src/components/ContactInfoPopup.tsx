@@ -3,8 +3,10 @@
 import { useState, useEffect } from "react";
 import { X, Info } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 const ContactInfoPopup = () => {
+    const t = useTranslations("Contact.popup");
     const [isVisible, setIsVisible] = useState(false);
     const [isClosed, setIsClosed] = useState(false);
 
@@ -21,9 +23,6 @@ const ContactInfoPopup = () => {
             // If closed, wait 2 minutes (120000ms) before resetting logic
             reappearTimer = setTimeout(() => {
                 setIsClosed(false);
-                // After resetting isClosed, the first effect branch will run on next render/dependency change if structured correctly,
-                // but here we simply reset state. faster approach:
-                // actually, if we set isClosed to false, the component re-renders but the effect needs to trigger again.
             }, 120000);
         }
 
@@ -59,12 +58,12 @@ const ContactInfoPopup = () => {
                             <Info size={20} />
                         </div>
                         <div>
-                            <h4 className="text-base font-bold text-accent mb-1">Comment ça marche ?</h4>
+                            <h4 className="text-base font-bold text-accent mb-1">{t("title")}</h4>
                             <p className="text-white/80 text-xs leading-relaxed mb-2">
-                                Remplissez le formulaire avec votre demande.
+                                {t("step1")}
                             </p>
                             <p className="text-white/80 text-xs leading-relaxed">
-                                ✅ Un <strong>email de confirmation</strong> vous sera envoyé instantanément.
+                                ✅ {t("step2")}
                             </p>
                         </div>
                     </div>
