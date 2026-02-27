@@ -346,6 +346,11 @@
                 "title": "Stock Master",
                 "category": "App Mobile",
                 "description": "Application mobile de gestion de stock complète et autonome avec interface Premium. Gestion centralisée des articles, traçabilité des mouvements, analyses statistiques avancées et support mode sombre/clair."
+            },
+            "05": {
+                "title": "Gestion Centralisée Camtel",
+                "category": "Fullstack",
+                "description": "Solution numérique de pointe conçue pour transformer le suivi des projets structurants au sein de Camtel. La plateforme offre un environnement collaboratif sécurisé avec authentification OTP, gestion RH dynamique, pilotage de projets avec budgets et suivi d'audit total via une Timeline détaillée."
             }
         }
     },
@@ -405,6 +410,8 @@
         "linkCopied": "Lien copié !",
         "shareTitle": "Partager cet article",
         "shareMessage": "🚀 Découvrez mon nouvel article : {title}\n\n{excerpt}\n\nLire la suite ici : ",
+        "searchPlaceholder": "Rechercher un article...",
+        "noResults": "Aucun article ne correspond à votre recherche.",
         "posts": [
             {
                 "id": 1,

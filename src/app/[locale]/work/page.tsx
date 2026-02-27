@@ -57,6 +57,24 @@ const projectsData = [
         live: "",
         github: "",
     },
+    {
+        num: "05",
+        id: "05",
+        stack: [{ name: "Laravel" }, { name: "MySQL" }, { name: "Alpine.js" }, { name: "Tailwind CSS" }],
+        image: "/assets/work/camtel_dashboard.png",
+        images: [
+            "/assets/work/camtel_dashboard.png",
+            "/assets/work/camtel_login.png",
+            "/assets/work/camtel_management_project.png",
+            "/assets/work/camtel_manadgement_tache.png",
+            "/assets/work/camtel_management_user.png",
+            "/assets/work/camtel_audit.png",
+            "/assets/work/camtel_verify_otp.png",
+            "/assets/work/camtel_password_reset.png"
+        ],
+        live: "",
+        github: "",
+    },
 ];
 
 const Work = () => {

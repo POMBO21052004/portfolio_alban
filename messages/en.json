@@ -346,6 +346,11 @@
                 "title": "Stock Master",
                 "category": "Mobile App",
                 "description": "Comprehensive and autonomous mobile stock management application with a Premium interface. Centralized article management, movement traceability, advanced statistical analysis, and dark/light mode support."
+            },
+            "05": {
+                "title": "Camtel Centralized Management",
+                "category": "Fullstack",
+                "description": "State-of-the-art digital solution designed to transform the tracking of structuring projects within Camtel. The platform offers a secure collaborative environment with OTP authentication, dynamic HR management, project steering with budgets, and total audit tracking via a detailed Timeline."
             }
         }
     },
@@ -405,6 +410,8 @@
         "linkCopied": "Link copied!",
         "shareTitle": "Share this article",
         "shareMessage": "🚀 Check out my new article: {title}\n\n{excerpt}\n\nRead more here: ",
+        "searchPlaceholder": "Search for an article...",
+        "noResults": "No articles match your search.",
         "posts": [
             {
                 "id": 1,
