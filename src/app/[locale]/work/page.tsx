@@ -104,7 +104,7 @@ const projectsData = [
             "/assets/work/camtel_verify_otp.png",
             "/assets/work/camtel_password_reset.png"
         ],
-        live: "",
+        live: "https://taskflowcamtel.infinityfreeapp.com",
         github: "",
         color: "#3b82f6",
     },
