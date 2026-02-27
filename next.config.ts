@@ -7,14 +7,14 @@ const withNextIntl = createNextIntlPlugin();
 const withPWA = withPWAInit({
   dest: "public",
   disable: process.env.NODE_ENV === "development",
-  register: true,
-  skipWaiting: true,
 });
 
 const nextConfig: NextConfig = {
   images: {
     qualities: [75, 100],
   },
+  // @ts-ignore - allowedDevOrigins is a new feature in Next.js 15+
+  allowedDevOrigins: ["192.168.100.14"],
 };
 
 export default withPWA(withNextIntl(nextConfig));
