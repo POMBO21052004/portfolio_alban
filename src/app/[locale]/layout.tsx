@@ -24,6 +24,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     icons: {
       icon: "/logo.png",
     },
+    manifest: "/manifest.json",
+    appleWebApp: {
+      capable: true,
+      statusBarStyle: "default",
+      title: t("title"),
+    },
+    formatDetection: {
+      telephone: false,
+    },
   };
 }
 

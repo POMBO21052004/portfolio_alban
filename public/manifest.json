@@ -1,0 +1,23 @@
+{
+    "name": "Pombo Mbe Alban | Portfolio",
+    "short_name": "Alban Portfolio",
+    "description": "Full-Stack Web Developer Portfolio",
+    "start_url": "/fr",
+    "display": "standalone",
+    "background_color": "#1c1c22",
+    "theme_color": "#00ff99",
+    "icons": [
+        {
+            "src": "/logo.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "/logo.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ]
+}
