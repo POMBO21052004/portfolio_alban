@@ -453,5 +453,9 @@
         "subtitle": "Page Introuvable",
         "description": "Oups ! La page que vous recherchez semble avoir disparu dans le cyberespace.",
         "backHome": "Retour à l'accueil"
+    },
+    "PWA": {
+        "install": "Installer l'App",
+        "installDescription": "Installez mon portfolio pour un accès rapide et hors-ligne !"
     }
 }

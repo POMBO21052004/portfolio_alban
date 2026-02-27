@@ -453,5 +453,9 @@
         "subtitle": "Page Not Found",
         "description": "Oops! The page you are looking for seems to have vanished into cyberspace.",
         "backHome": "Back to Home"
+    },
+    "PWA": {
+        "install": "Install App",
+        "installDescription": "Install my portfolio for fast and offline access!"
     }
 }

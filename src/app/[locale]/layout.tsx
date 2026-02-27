@@ -8,6 +8,7 @@ import { getMessages, getTranslations } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import InstallPWA from "@/components/InstallPWA";
+import { Analytics } from "@vercel/analytics/react";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -86,6 +87,7 @@ export default async function RootLayout({
           <Header />
           <PageTransition>{children}</PageTransition>
           <InstallPWA />
+          <Analytics />
         </NextIntlClientProvider>
       </body>
     </html>
