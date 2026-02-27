@@ -5,6 +5,7 @@ import { Download } from "lucide-react";
 import Socials from "@/components/Socials";
 import Photo from "@/components/Photo";
 import Stats from "@/components/Stats";
+import Hero3D from "@/components/Hero3D";
 import { useTranslations } from "next-intl";
 
 export default function Home() {
@@ -21,7 +22,8 @@ export default function Home() {
   }, [t]);
 
   return (
-    <section className="h-full">
+    <section className="h-full relative overflow-hidden">
+      <Hero3D />
       <div className="container mx-auto h-full">
         <div className="flex flex-col xl:flex-row items-center xl:justify-start xl:gap-[100px] xl:pt-8 xl:pb-24">
           <div className="text-center xl:text-left order-2 xl:order-none">
